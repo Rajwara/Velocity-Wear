@@ -196,7 +196,6 @@ export default function Footer({ pageId }: { pageId: string }) {
                         className="footer-wrapp"
                         data-wf-page-id={pageId}
                         data-wf-element-id="42e44b08-69fd-e168-153c-bb480fba417b"
-                        data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
                       >
                         <input
                           className="footer-field w-input"

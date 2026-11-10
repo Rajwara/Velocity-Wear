@@ -115,7 +115,10 @@ export default function ShopFilters({
 
   return (
     <>
-      <div className={`shop-menu-block filter-panel${panelOpen ? " is-open" : ""}`}>
+      <div
+        className={`shop-menu-block filter-panel${panelOpen ? " is-open" : ""}`}
+        data-lenis-prevent=""
+      >
         <div className="filter-panel-head">
           <div className="filter-panel-title">Filters</div>
           <button type="button" className="filter-close" onClick={() => setPanelOpen(false)}>

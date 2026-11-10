@@ -55,7 +55,7 @@ export default function CartDrawer() {
           </div>
         ) : (
           <>
-            <ul className="cart-items" role="list">
+            <ul className="cart-items" role="list" data-lenis-prevent="">
               {items.map(({ product, quantity, lineTotal }) => (
                 <li key={product.slug} className="cart-item">
                   <a href={`/product/${product.slug}`} className="cart-thumb">

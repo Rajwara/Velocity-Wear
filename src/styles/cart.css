@@ -9,8 +9,8 @@
   cursor: pointer;
 }
 
-html.cart-open,
-html.cart-open body {
+html.scroll-locked,
+html.scroll-locked body {
   overflow: hidden;
 }
 

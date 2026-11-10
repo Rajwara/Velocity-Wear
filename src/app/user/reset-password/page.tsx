@@ -62,7 +62,6 @@ export default function Page() {
                 className="user-wrap"
                 data-wf-page-id="6ab5051c08c310be25f9b370"
                 data-wf-element-id="ac75b3bc-bd3a-7d1b-a365-5a412a314289"
-                data-turnstile-sitekey="0x4AAAAAAAQTptj2So4dx43e"
               >
                 <div className="user-grid">
                   <div

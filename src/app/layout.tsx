@@ -8,8 +8,10 @@ import "@/styles/overrides.css";
 import "@/styles/shop-filters.css";
 import "@/styles/cart.css";
 import "@/styles/cart-page.css";
+import "@/styles/floating.css";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
+import FloatingActions from "@/components/floating/FloatingActions";
 
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.
@@ -70,6 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <CartProvider>
           {children}
           <CartDrawer />
+          <FloatingActions />
         </CartProvider>
       </body>
     </html>

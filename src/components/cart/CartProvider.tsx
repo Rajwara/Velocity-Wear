@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import { getProduct, priceValue, type Product } from "@/data/products";
+import { lockScroll } from "@/lib/scroll";
 
 const STORAGE_KEY = "velocity-wear-cart";
 const MAX_QTY = 99;
@@ -94,7 +95,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
 
   // Lock page scroll while the cart is open.
   useEffect(() => {
-    document.documentElement.classList.toggle("cart-open", isOpen);
+    lockScroll("cart", isOpen);
   }, [isOpen]);
 
   const add = useCallback((slug: string, quantity = 1) => {

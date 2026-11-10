@@ -3,7 +3,13 @@
 import { useEffect } from "react";
 import { BUNDLES, type Bundle } from "@/components/webflow-config";
 
-type LenisInstance = { on(event: string, cb: () => void): void; raf(time: number): void };
+export type LenisInstance = {
+  on(event: string, cb: () => void): void;
+  raf(time: number): void;
+  scrollTo(target: number | string | HTMLElement, options?: Record<string, unknown>): void;
+  stop(): void;
+  start(): void;
+};
 type Gsap = {
   registerPlugin(...plugins: unknown[]): void;
   ticker: { add(cb: (time: number) => void): void; lagSmoothing(v: number): void };
@@ -15,6 +21,8 @@ declare global {
     gsap?: Gsap;
     ScrollTrigger?: { update(): void };
     Lenis?: new (options: Record<string, unknown>) => LenisInstance;
+    /** the running smooth-scroll instance (see src/lib/scroll.ts) */
+    __lenis?: LenisInstance;
   }
 }
 
@@ -54,6 +62,27 @@ function showMessage(text: string) {
  * Stand-ins for the parts that need a backend (forms and checkout; the cart itself lives in src/components/cart).
  * Replace these with real handlers when you connect a commerce / email service.
  */
+/** Footer newsletter form: send to /api/newsletter and show Webflow's success / error block. */
+async function submitNewsletter(form: HTMLFormElement) {
+  const wrapper = form.closest(".w-form");
+  const done = wrapper?.querySelector<HTMLElement>(".w-form-done");
+  const fail = wrapper?.querySelector<HTMLElement>(".w-form-fail");
+  const email = new FormData(form).get("email");
+  try {
+    const res = await fetch("/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, source: "footer" }),
+    });
+    if (!res.ok) throw new Error();
+    form.style.display = "none";
+    if (fail) fail.style.display = "none";
+    if (done) done.style.display = "block";
+  } catch {
+    if (fail) fail.style.display = "block";
+  }
+}
+
 function installDemoAdapters() {
   document.addEventListener(
     "submit",
@@ -63,6 +92,10 @@ function installDemoAdapters() {
       if (form.closest("[data-cart-form]")) return;
       e.preventDefault();
       e.stopImmediatePropagation();
+      if (form.matches('[data-name="Newsletter"]')) {
+        void submitNewsletter(form as HTMLFormElement);
+        return;
+      }
       showMessage("Demo form: connect your email or account service to enable submissions.");
     },
     true,
@@ -90,6 +123,7 @@ function initSmoothScroll() {
     easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
   });
+  window.__lenis = lenis;
   lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
