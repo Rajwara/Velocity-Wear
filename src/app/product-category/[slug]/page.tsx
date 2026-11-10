@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -17,7 +18,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getCategory((await params).slug);
   if (!category) return {};
-  return { title: category.seo.title, description: category.seo.description };
+  return {
+    title: category.seo.title,
+    description: category.seo.description,
+    ...socialMeta({
+      title: category.seo.title,
+      description: category.seo.description,
+      image: `/images/share/categories/${category.slug}.jpg`,
+      alt: category.title,
+    }),
+  };
 }
 
 export default async function ProductCategoryPage({ params }: Props) {

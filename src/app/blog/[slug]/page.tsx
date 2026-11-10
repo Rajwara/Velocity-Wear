@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import { getBlogCategory, getPost, posts } from "@/data/blog";
@@ -14,7 +15,17 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost((await params).slug);
   if (!post) return {};
-  return { title: post.seo.title, description: post.seo.description };
+  return {
+    title: post.seo.title,
+    description: post.seo.description,
+    ...socialMeta({
+      title: post.seo.title,
+      description: post.seo.description,
+      image: `/images/share/blog/${post.slug}.jpg`,
+      alt: post.title,
+      type: "article",
+    }),
+  };
 }
 
 export default async function BlogPostPage({ params }: Props) {

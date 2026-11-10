@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
   title: "Sign Up | Velocity Wear - Performance Sportswear",
   description:
     "Sign up for Velocity Wear to create your account, explore new collections, manage orders, access personalized features, and enjoy a seamless shopping experience.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Sign Up | Velocity Wear - Performance Sportswear",
     description:
       "Sign up for Velocity Wear to create your account, explore new collections, manage orders, access personalized features, and enjoy a seamless shopping experience.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

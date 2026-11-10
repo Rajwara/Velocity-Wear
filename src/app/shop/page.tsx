@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 import BenefitsSection from "@/components/BenefitsSection";
 import ShopFilters from "@/components/ShopFilters";
@@ -9,12 +10,12 @@ export const metadata: Metadata = {
   title: "Shop | Velocity Wear - Performance Sportswear",
   description:
     "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Shop | Velocity Wear - Performance Sportswear",
     description:
       "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
-  },
+    image: "/images/share/shop.jpg",
+  }),
 };
 
 type Props = { searchParams: Promise<Record<string, string | string[] | undefined>> };

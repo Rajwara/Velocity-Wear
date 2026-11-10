@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Velocity Wear - Performance Sportswear",
   description:
     "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Privacy Policy | Velocity Wear - Performance Sportswear",
     description:
       "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

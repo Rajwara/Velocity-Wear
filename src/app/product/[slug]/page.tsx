@@ -1,6 +1,7 @@
 import WishlistButton from "@/components/wishlist/WishlistButton";
 import AddToCartForm from "@/components/cart/AddToCartForm";
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import Button from "@/components/Button";
@@ -19,7 +20,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct((await params).slug);
   if (!product) return {};
-  return { title: product.seo.title, description: product.seo.description };
+  return {
+    title: product.seo.title,
+    description: product.seo.description,
+    ...socialMeta({
+      title: product.seo.title,
+      description: product.seo.description,
+      image: `/images/share/products/${product.slug}.jpg`,
+      alt: product.name,
+    }),
+  };
 }
 
 export default async function ProductPage({ params }: Props) {

@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "External Link | Velocity Wear - Performance Sportswear",
   description:
     "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "External Link | Velocity Wear - Performance Sportswear",
     description:
       "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

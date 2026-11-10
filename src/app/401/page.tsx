@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
   title: "Protected | Velocity Wear - Performance Sportswear",
   description: "This Velocity Wear page is password protected.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Protected | Velocity Wear - Performance Sportswear",
     description: "This Velocity Wear page is password protected.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

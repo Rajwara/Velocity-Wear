@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 import FindYourFit from "@/components/home/FindYourFit";
 import MostWanted from "@/components/home/MostWanted";
@@ -11,12 +12,12 @@ export const metadata: Metadata = {
   title: "Velocity Wear - Performance Sportswear",
   description:
     "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Velocity Wear - Performance Sportswear",
     description:
       "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { siteUrl, socialMeta } from "@/lib/share";
 import type { ReactNode } from "react";
 import { WEBFLOW_SITE_ID } from "@/components/webflow-config";
 import "@/styles/webflow.css";
@@ -19,9 +20,13 @@ import { QuickViewProvider } from "@/components/quickview/QuickView";
 import WishlistProvider from "@/components/wishlist/WishlistProvider";
 
 export const metadata: Metadata = {
-  // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  openGraph: { siteName: "Velocity Wear", images: ["/images/social/default.webp"] },
+  // Share-image links need an absolute address: NEXT_PUBLIC_SITE_URL, else the Vercel URL.
+  metadataBase: new URL(siteUrl()),
+  ...socialMeta({
+    title: "Velocity Wear - Performance Sportswear",
+    description:
+      "Performance sportswear for running, training, football and tennis, plus caps, bottles, bags and accessories.",
+  }),
   title: "Velocity Wear - Performance Sportswear",
   icons: {
     icon: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 import BlogCard from "@/components/BlogCard";
 import { getLatestPosts } from "@/data/blog";
@@ -7,12 +8,12 @@ export const metadata: Metadata = {
   title: "Blog | Velocity Wear - Performance Sportswear",
   description:
     "Explore the Velocity Wear blog for sports news, tips, insights, and helpful advice on choosing, wearing and caring for sportswear.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Blog | Velocity Wear - Performance Sportswear",
     description:
       "Explore the Velocity Wear blog for sports news, tips, insights, and helpful advice on choosing, wearing and caring for sportswear.",
-  },
+    image: "/images/share/blog.jpg",
+  }),
 };
 
 export default function Page() {

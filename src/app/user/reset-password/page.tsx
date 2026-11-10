@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
   title: "Reset Password | Velocity Wear - Performance Sportswear",
   description:
     "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sportswear with confidence.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Reset Password | Velocity Wear - Performance Sportswear",
     description:
       "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sportswear with confidence.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

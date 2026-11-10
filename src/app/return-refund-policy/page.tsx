@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Return & Refund Policy | Velocity Wear - Performance Sportswear",
   description:
     "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Return & Refund Policy | Velocity Wear - Performance Sportswear",
     description:
       "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
-  },
+    image: "/images/share/default.jpg",
+  }),
 };
 
 export default function Page() {

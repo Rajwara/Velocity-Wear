@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import BlogCard from "@/components/BlogCard";
@@ -18,7 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: category.seo.title,
     description: category.seo.description,
-    openGraph: { images: ["/images/social/blog.webp"] },
+    ...socialMeta({
+      title: category.seo.title,
+      description: category.seo.description,
+      image: "/images/share/blog.jpg",
+    }),
   };
 }
 

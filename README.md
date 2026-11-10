@@ -127,6 +127,20 @@ Every page has floating buttons (`src/components/floating/`): chat and newslette
   tool (e.g. Mailchimp or Klaviyo via Zapier / Make). Without it they are only logged.
 - **Back to top:** appears after scrolling down.
 
+### Link previews (share images)
+
+Every page has a 1200x630 JPG preview image (shown when a link is shared on WhatsApp,
+Facebook, LinkedIn, X, etc.) in `public/images/share/`: one per main page, category,
+product and blog post. After adding products, categories or posts, rebuild them with:
+
+```bash
+pip install Pillow
+python3 scripts/make-share-images.py
+```
+
+The image links use `NEXT_PUBLIC_SITE_URL` if set (set it to your own domain when you
+have one); on Vercel the project's production address is used automatically.
+
 ### Thank-you page and form endpoints
 
 After a successful submission visitors are sent to `/thank-you`, which adapts to what they did:

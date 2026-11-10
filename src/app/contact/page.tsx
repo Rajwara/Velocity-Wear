@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { socialMeta } from "@/lib/share";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Contact | Velocity Wear - Performance Sportswear",
   description:
     "Contact Velocity Wear for help with products, sizing, orders, returns and anything else about your kit.",
-  openGraph: {
-    images: ["/images/social/default.webp"],
+  ...socialMeta({
     title: "Contact | Velocity Wear - Performance Sportswear",
     description:
       "Contact Velocity Wear for help with products, sizing, orders, returns and anything else about your kit.",
-  },
+    image: "/images/share/contact.jpg",
+  }),
 };
 
 export default function Page() {
