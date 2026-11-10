@@ -127,5 +127,18 @@ Every page has floating buttons (`src/components/floating/`): chat and newslette
   tool (e.g. Mailchimp or Klaviyo via Zapier / Make). Without it they are only logged.
 - **Back to top:** appears after scrolling down.
 
-For now, submitting the contact / account forms shows a short demo notice (see `installDemoAdapters` in `src/components/WebflowRuntime.tsx`). Replace
-those handlers with your own API routes or services when you connect a backend.
+### Thank-you page and form endpoints
+
+After a successful submission visitors are sent to `/thank-you`, which adapts to what they did:
+
+| Form | Endpoint | Webhook env var | Thank-you URL |
+| --- | --- | --- | --- |
+| Checkout (cash on delivery) | `POST /api/orders` | `ORDER_WEBHOOK_URL` | `/thank-you?type=order&order=VW-…` |
+| Newsletter popup & footer | `POST /api/newsletter` | `NEWSLETTER_WEBHOOK_URL` | `/thank-you?type=newsletter` |
+| Contact page | `POST /api/contact` | `CONTACT_WEBHOOK_URL` | `/thank-you?type=contact` |
+
+Without the webhook variables, submissions are only written to the server log.
+
+The log in, sign up, reset password and protected-page forms still show a notice (see
+`installDemoAdapters` in `src/components/WebflowRuntime.tsx`): they need an account
+service before they can work.
