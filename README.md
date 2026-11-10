@@ -93,14 +93,24 @@ animated elements until the Webflow interactions have initialised, as in the exp
 The export came from a Webflow Ecommerce site, and these features need a service
 behind them:
 
-- Checkout and payment (the cart itself works: see below)
+- Online card / PayPal payments (cash on delivery works: see below)
 - Newsletter and contact forms
 - Log in / sign up / reset password, and the password-protected page
 
-The cart works without a backend: `src/components/cart/` keeps it in the visitor's
-browser (localStorage), with a slide-out cart drawer and the item count in the header.
-When you add a payment provider (e.g. Stripe or Shopify), point the drawer's Checkout
-button at it.
+### Cart, checkout and orders
 
-For now, submitting a form or clicking checkout shows a short demo notice (see `installDemoAdapters` in `src/components/WebflowRuntime.tsx`). Replace
+- `/cart` shows the full cart; `/checkout` collects contact and delivery details,
+  shipping method (standard free / express $14.99) and payment.
+- The cart is kept in the visitor's browser (localStorage) by `src/components/cart/`.
+- **Payment: cash on delivery** is the only method switched on for now. Card and PayPal
+  are shown as "coming soon"; enable them in `PAYMENT_METHODS` in `src/lib/checkout.ts`
+  once a payment provider is connected.
+- Orders are sent to `POST /api/orders` (`src/app/api/orders/route.ts`), which re-checks
+  the products and recalculates every price on the server.
+- **Where orders go:** set the environment variable `ORDER_WEBHOOK_URL` to a webhook
+  (Zapier, Make, a Google Apps Script for Google Sheets, Slack, etc.) and every order is
+  POSTed there as JSON. Without it, orders are only written to the server log, so
+  **set this before taking real orders.**
+
+For now, submitting the newsletter / contact / account forms shows a short demo notice (see `installDemoAdapters` in `src/components/WebflowRuntime.tsx`). Replace
 those handlers with your own API routes or services when you connect a backend.

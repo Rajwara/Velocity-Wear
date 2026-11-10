@@ -122,9 +122,9 @@ export default function CartDrawer() {
               <a href="/checkout" className="cart-primary">
                 Checkout
               </a>
-              <button type="button" className="cart-secondary" onClick={close}>
-                Continue shopping
-              </button>
+              <a href="/cart" className="cart-secondary">
+                View cart
+              </a>
             </div>
           </>
         )}

@@ -59,7 +59,7 @@ function installDemoAdapters() {
     "submit",
     (e) => {
       const form = e.target as HTMLElement;
-      // Add-to-cart forms are handled by the cart (src/components/cart).
+      // Cart and checkout forms are handled by the app (src/components/cart).
       if (form.closest("[data-cart-form]")) return;
       e.preventDefault();
       e.stopImmediatePropagation();
@@ -71,10 +71,10 @@ function installDemoAdapters() {
     "click",
     (e) => {
       const a = (e.target as HTMLElement).closest("a");
-      if (a && /\/(checkout|paypal-checkout)(?:[/?#]|$)/.test(a.getAttribute("href") || "")) {
+      if (a && /\/paypal-checkout(?:[/?#]|$)/.test(a.getAttribute("href") || "")) {
         e.preventDefault();
         e.stopImmediatePropagation();
-        showMessage("Checkout requires a connected payment and ecommerce service.");
+        showMessage("PayPal checkout requires a connected payment service.");
       }
     },
     true,

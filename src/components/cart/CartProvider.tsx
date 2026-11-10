@@ -22,6 +22,8 @@ type CartContextValue = {
   count: number;
   subtotal: number;
   isOpen: boolean;
+  /** false until the saved cart has been read from the browser */
+  loaded: boolean;
   add: (slug: string, quantity?: number) => void;
   setQuantity: (slug: string, quantity: number) => void;
   remove: (slug: string) => void;
@@ -135,6 +137,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       count: items.reduce((n, i) => n + i.quantity, 0),
       subtotal: items.reduce((n, i) => n + i.lineTotal, 0),
       isOpen,
+      loaded,
       add,
       setQuantity,
       remove,
@@ -142,7 +145,7 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       open,
       close,
     };
-  }, [lines, isOpen, add, setQuantity, remove, clear, open, close]);
+  }, [lines, isOpen, loaded, add, setQuantity, remove, clear, open, close]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

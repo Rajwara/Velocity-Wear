@@ -7,6 +7,7 @@ import "@/styles/fonts.css";
 import "@/styles/overrides.css";
 import "@/styles/shop-filters.css";
 import "@/styles/cart.css";
+import "@/styles/cart-page.css";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 
