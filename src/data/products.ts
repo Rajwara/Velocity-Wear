@@ -10,9 +10,6 @@ export type Product = {
   excerpt: string;
   description: string;
   returnPolicy: string;
-  /** Webflow Ecommerce identifiers, used by the add-to-cart forms */
-  skuId: string;
-  productId: string;
   /** position in "featured" lists (shop page, home page, related products) */
   featured?: number;
   seo: { title: string; description?: string };
@@ -39,8 +36,6 @@ export const products: Product[] = [
       "The Strike Pro pairs a soft synthetic upper with a stiff, lightweight soleplate and conical studs for fast acceleration on firm natural grass. A snug collar locks the foot in place, while the textured strike zone gives you extra control on the ball.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0f2188e5d116637e0726d",
-    productId: "6aa0f21746c73ee092d2b7bd",
     featured: 1,
     seo: {
       title: "Strike Pro Football Boots | Velocity Wear - Performance Sportswear",
@@ -61,8 +56,6 @@ export const products: Product[] = [
       "Made from a quick-drying recycled polyester knit, the Aero Tee moves sweat away from your skin and dries fast. Perforated side panels add airflow where you need it most, flat seams prevent chafing, and a reflective lime detail keeps you visible in low light.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0ec77b17b5e7201441927",
-    productId: "6aa0ec769e46435f50ea0046",
     featured: 2,
     seo: {
       title: "Aero Running Tee | Velocity Wear - Performance Sportswear",
@@ -83,8 +76,6 @@ export const products: Product[] = [
       "The Club Match Jersey uses an engineered knit that is more open where you heat up and denser where you need structure. It is cut for a free range of motion and finished with a clean V-neck and lime trim. Ready for your team's numbers and badges.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0ec2285dc4856e2e7830a",
-    productId: "6aa0ec214829aeef3f7d5bef",
     featured: 3,
     seo: {
       title: "Club Match Jersey | Velocity Wear - Performance Sportswear",
@@ -105,8 +96,6 @@ export const products: Product[] = [
       "The Pace combines a sock-like knit upper with a responsive foam midsole that cushions every landing and returns energy into each stride. A durable rubber outsole grips wet and dry roads, and the padded heel tab makes them easy to pull on.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0ebd2d83167e10f431aa0",
-    productId: "6aa0ebd2209c3215d9d4435a",
     featured: 4,
     seo: {
       title: "Pace Running Shoes | Velocity Wear - Performance Sportswear",
@@ -127,8 +116,6 @@ export const products: Product[] = [
       "The Thermal Quarter-Zip has a soft brushed interior that traps heat without bulk, and a smooth exterior that layers easily under a shell. Thumbholes keep the sleeves in place and the high collar zips up to block the wind.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0eb618e5d116637ddd237",
-    productId: "6aa0eb606ebeb100bce6d49b",
     featured: 5,
     seo: {
       title: "Thermal Quarter-Zip | Velocity Wear - Performance Sportswear",
@@ -149,8 +136,6 @@ export const products: Product[] = [
       "The Court Polo is made from a smooth, stretchy piqué that wicks sweat and dries quickly through long rallies. A tailored athletic fit, soft collar and lime tipping keep you looking sharp from the first serve to match point.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0eb12697f282ae3bc148b",
-    productId: "6aa0eb11d02666b337a24392",
     featured: 6,
     seo: {
       title: "Court Polo Shirt | Velocity Wear - Performance Sportswear",
@@ -171,8 +156,6 @@ export const products: Product[] = [
       "Knitted in one piece with no side seams, the Seamless Sports Bra feels smooth against the skin and moves with you. A supportive ribbed band, removable pads and a racerback make it ideal for strength training, studio classes and runs.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0e8d3f412dea2851798c4",
-    productId: "6aa0e8d388eb96ffc47db6d1",
     seo: {
       title: "Seamless Sports Bra | Velocity Wear - Performance Sportswear",
       description:
@@ -192,8 +175,6 @@ export const products: Product[] = [
       "The Flex Leggings are made from a four-way-stretch fabric that supports without restricting. The high waistband stays in place through squats and lunges, a hidden pocket holds a key or card, and reflective lime tabs sit at the hem.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0e7467a1f8ce620c6cf60",
-    productId: "6aa0e745b4bc958945a55cce",
     seo: {
       title: "Flex Training Leggings | Velocity Wear - Performance Sportswear",
       description:
@@ -213,8 +194,6 @@ export const products: Product[] = [
       "The Ace skirt swings freely with every movement while the built-in shorts give you full coverage and a secure ball pocket. The soft, wide waistband sits comfortably through every match and the fabric dries fast.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0e958d866d24dfe7079ec",
-    productId: "6aa0e958b17b5e72014333b0",
     seo: {
       title: "Ace Pleated Tennis Skirt | Velocity Wear - Performance Sportswear",
       description:
@@ -234,8 +213,6 @@ export const products: Product[] = [
       "The Storm Shell keeps rain out and lets heat escape thanks to a breathable waterproof membrane and taped seams. It packs into its own pocket, has an adjustable hood that stays put when you run, and lime zip pullers that are easy to grab with cold hands.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0ea0547e1155178da0191",
-    productId: "6aa0ea04dc6b0c1412ca07f6",
     seo: {
       title: "Storm Shell Jacket | Velocity Wear - Performance Sportswear",
       description:
@@ -245,7 +222,7 @@ export const products: Product[] = [
   {
     slug: "training-duffel-bag",
     name: "Training Duffel Bag",
-    category: "accessories",
+    category: "bags",
     image: "/images/products/training-duffel-bag.webp",
     price: "$69.99",
     comparePrice: "$89.99",
@@ -255,8 +232,6 @@ export const products: Product[] = [
       "The Training Duffel is made from water-resistant ripstop fabric with a ventilated shoe compartment to keep clean and used kit apart. Inside and outside pockets organise your essentials, and the padded shoulder strap makes it easy to carry.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0e6b0103a27afa189ea99",
-    productId: "6aa0e6afaaac254951379e53",
     seo: {
       title: "Training Duffel Bag | Velocity Wear - Performance Sportswear",
       description:
@@ -266,7 +241,7 @@ export const products: Product[] = [
   {
     slug: "performance-cap",
     name: "Performance Cap",
-    category: "accessories",
+    category: "caps",
     image: "/images/products/performance-cap.webp",
     price: "$29.99",
     comparePrice: "$34.99",
@@ -276,12 +251,234 @@ export const products: Product[] = [
       "The Performance Cap keeps the sun out of your eyes and the sweat off your face. Laser-cut panels let heat escape, a soft sweatband wicks moisture and the adjustable strap gives a secure fit on every run.",
     returnPolicy:
       "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
-    skuId: "6aa0ea963436baa432d6193d",
-    productId: "6aa0ea94b17b5e72014381a9",
     seo: {
       title: "Performance Cap | Velocity Wear - Performance Sportswear",
       description:
         "Shop the Performance Cap from Velocity Wear. A lightweight running cap with laser-cut ventilation, a sweat-wicking band and a lime under-brim.",
+    },
+  },
+  {
+    slug: "velocity-trucker-cap",
+    name: "Velocity Trucker Cap",
+    category: "caps",
+    image: "/images/products/velocity-trucker-cap.webp",
+    price: "$27.99",
+    comparePrice: "$34.99",
+    excerpt:
+      "A structured trucker cap with a breathable mesh back, curved brim and lime snapback closure.",
+    description:
+      "The Velocity Trucker Cap has a firm five-panel front, a cool mesh back that lets heat escape and a moisture-wicking sweatband. The curved brim keeps the sun off your face and the snapback closure adjusts for a secure fit, on and off the track.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Velocity Trucker Cap | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Velocity Trucker Cap from Velocity Wear. A structured trucker cap with a breathable mesh back, curved brim and lime snapback closure.",
+    },
+  },
+  {
+    slug: "packable-run-cap",
+    name: "Packable Run Cap",
+    category: "caps",
+    image: "/images/products/packable-run-cap.webp",
+    price: "$24.99",
+    comparePrice: "$29.99",
+    excerpt:
+      "An ultralight, unstructured running cap that dries fast and folds flat into any pocket.",
+    description:
+      "Made from a featherweight quick-dry fabric, the Packable Run Cap has no stiff panels, so it can be folded into a pocket or waist pack and pops back into shape. Reflective details keep you visible in low light, and the elastic strap stays put on every run.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Packable Run Cap | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Packable Run Cap from Velocity Wear. An ultralight, unstructured running cap that dries fast and folds flat into any pocket.",
+    },
+  },
+  {
+    slug: "insulated-steel-bottle",
+    name: "Insulated Steel Bottle 750ml",
+    category: "water-bottles",
+    image: "/images/products/insulated-steel-bottle.webp",
+    price: "$34.99",
+    comparePrice: "$39.99",
+    excerpt:
+      "A double-wall stainless steel bottle that keeps drinks cold for 24 hours and hot for 12.",
+    description:
+      "The Insulated Steel Bottle has vacuum-sealed double walls to keep water ice-cold through long sessions. The leak-proof lid has a lime carry loop, the powder-coated finish won't sweat or slip, and the wide mouth fits ice cubes and is easy to clean.",
+    returnPolicy:
+      "Unused items in their original packaging can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Insulated Steel Bottle 750ml | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Insulated Steel Bottle 750ml from Velocity Wear. A double-wall stainless steel bottle that keeps drinks cold for 24 hours and hot for 12.",
+    },
+  },
+  {
+    slug: "squeeze-sports-bottle",
+    name: "Squeeze Sports Bottle 600ml",
+    category: "water-bottles",
+    image: "/images/products/squeeze-sports-bottle.webp",
+    price: "$14.99",
+    comparePrice: "$19.99",
+    excerpt:
+      "A soft, lightweight squeeze bottle with a high-flow valve for quick drinks on the move.",
+    description:
+      "The Squeeze Sports Bottle is made from BPA-free, odour-resistant plastic that's easy to squeeze mid-run or mid-set. The self-sealing high-flow valve won't leak in your bag, and the slim shape fits bike cages and bag pockets.",
+    returnPolicy:
+      "Unused items in their original packaging can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Squeeze Sports Bottle 600ml | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Squeeze Sports Bottle 600ml from Velocity Wear. A soft, lightweight squeeze bottle with a high-flow valve for quick drinks on the move.",
+    },
+  },
+  {
+    slug: "protein-shaker-bottle",
+    name: "Protein Shaker Bottle 700ml",
+    category: "water-bottles",
+    image: "/images/products/protein-shaker-bottle.webp",
+    price: "$19.99",
+    comparePrice: "$24.99",
+    excerpt:
+      "A leak-proof shaker with a stainless mixing ball for smooth, lump-free protein shakes.",
+    description:
+      "The Protein Shaker Bottle has a screw-on lid with a locking flip cap, so nothing leaks into your gym bag. The stainless steel mixing ball blends powders smoothly, and the BPA-free bottle is dishwasher safe.",
+    returnPolicy:
+      "Unused items in their original packaging can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Protein Shaker Bottle 700ml | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Protein Shaker Bottle 700ml from Velocity Wear. A leak-proof shaker with a stainless mixing ball for smooth, lump-free protein shakes.",
+    },
+  },
+  {
+    slug: "everyday-gym-backpack",
+    name: "Everyday Gym Backpack",
+    category: "bags",
+    image: "/images/products/everyday-gym-backpack.webp",
+    price: "$79.99",
+    comparePrice: "$99.99",
+    excerpt:
+      "A 25L backpack with a padded laptop sleeve and a ventilated shoe compartment for gym-to-work days.",
+    description:
+      "The Everyday Gym Backpack carries everything from your laptop to your training kit. A separate ventilated compartment keeps shoes and used kit away from everything else, the padded straps stay comfortable all day, and the water-resistant fabric shrugs off rain.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Everyday Gym Backpack | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Everyday Gym Backpack from Velocity Wear. A 25L backpack with a padded laptop sleeve and a ventilated shoe compartment for gym-to-work days.",
+    },
+  },
+  {
+    slug: "running-waist-pack",
+    name: "Running Waist Pack",
+    category: "bags",
+    image: "/images/products/running-waist-pack.webp",
+    price: "$29.99",
+    comparePrice: "$34.99",
+    excerpt: "A slim, bounce-free waist pack that holds your phone, keys and gels while you run.",
+    description:
+      "The Running Waist Pack sits close to your body with a soft stretch belt that doesn't bounce or chafe. Zipped pockets fit the largest phones, keys and energy gels, and reflective details help you stay visible after dark.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Running Waist Pack | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Running Waist Pack from Velocity Wear. A slim, bounce-free waist pack that holds your phone, keys and gels while you run.",
+    },
+  },
+  {
+    slug: "drawstring-gym-sack",
+    name: "Drawstring Gym Sack",
+    category: "bags",
+    image: "/images/products/drawstring-gym-sack.webp",
+    price: "$19.99",
+    comparePrice: "$24.99",
+    excerpt: "A lightweight drawstring bag for quick trips to the gym, pitch or pool.",
+    description:
+      "The Drawstring Gym Sack is made from water-resistant ripstop with tough corner reinforcements and smooth-running cords. A zipped outer pocket keeps your phone and keys separate, and it packs flat when you don't need it.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Drawstring Gym Sack | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Drawstring Gym Sack from Velocity Wear. A lightweight drawstring bag for quick trips to the gym, pitch or pool.",
+    },
+  },
+  {
+    slug: "performance-crew-socks",
+    name: "Performance Crew Socks (3 Pack)",
+    category: "accessories",
+    image: "/images/products/performance-crew-socks.webp",
+    price: "$24.99",
+    comparePrice: "$29.99",
+    excerpt: "Cushioned, breathable crew socks with arch support for running and training.",
+    description:
+      "These Performance Crew Socks have targeted cushioning at the heel and toe, a supportive arch band and breathable mesh zones that keep feet cool and dry. Seamless toes prevent rubbing. The pack includes black, grey and white pairs.",
+    returnPolicy:
+      "For hygiene reasons, this item can only be returned unopened in its original packaging within 30 days. See our return policy for details.",
+    seo: {
+      title: "Performance Crew Socks (3 Pack) | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Performance Crew Socks (3 Pack) from Velocity Wear. Cushioned, breathable crew socks with arch support for running and training.",
+    },
+  },
+  {
+    slug: "microfibre-gym-towel",
+    name: "Microfibre Gym Towel",
+    category: "accessories",
+    image: "/images/products/microfibre-gym-towel.webp",
+    price: "$19.99",
+    comparePrice: "$24.99",
+    excerpt: "A soft, super-absorbent microfibre towel that dries fast and packs small.",
+    description:
+      "The Microfibre Gym Towel absorbs sweat quickly and dries far faster than cotton, so it's ready for your next session. It folds small into any bag and has a lime trim and hanging loop.",
+    returnPolicy:
+      "Unused items in their original packaging can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Microfibre Gym Towel | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Microfibre Gym Towel from Velocity Wear. A soft, super-absorbent microfibre towel that dries fast and packs small.",
+    },
+  },
+  {
+    slug: "headband-wristband-set",
+    name: "Headband & Wristband Set",
+    category: "accessories",
+    image: "/images/products/headband-wristband-set.webp",
+    price: "$14.99",
+    comparePrice: "$19.99",
+    excerpt:
+      "A soft terry headband and two wristbands to keep sweat out of your eyes and off your hands.",
+    description:
+      "This set includes one headband and two wristbands made from soft, absorbent terry with a stretchy fit that stays in place. Perfect for tennis, running and high-intensity training.",
+    returnPolicy:
+      "For hygiene reasons, this item can only be returned unopened in its original packaging within 30 days. See our return policy for details.",
+    seo: {
+      title: "Headband & Wristband Set | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Headband & Wristband Set from Velocity Wear. A soft terry headband and two wristbands to keep sweat out of your eyes and off your hands.",
+    },
+  },
+  {
+    slug: "touchscreen-running-gloves",
+    name: "Touchscreen Running Gloves",
+    category: "accessories",
+    image: "/images/products/touchscreen-running-gloves.webp",
+    price: "$24.99",
+    comparePrice: "$29.99",
+    excerpt:
+      "Lightweight thermal running gloves with touchscreen fingertips and reflective details.",
+    description:
+      "The Touchscreen Running Gloves keep your hands warm on cold runs without bulk. Conductive fingertips let you use your phone without taking them off, a silicone palm grip holds your phone securely, and reflective details add visibility.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    seo: {
+      title: "Touchscreen Running Gloves | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Touchscreen Running Gloves from Velocity Wear. Lightweight thermal running gloves with touchscreen fingertips and reflective details.",
     },
   },
 ];
@@ -338,13 +535,43 @@ export const categories: Category[] = [
     },
   },
   {
+    slug: "caps",
+    name: "Caps",
+    title: "Caps Collection",
+    seo: {
+      title: "Caps | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop caps from Velocity Wear. Lightweight running caps and trucker caps that keep the sun off and the sweat away.",
+    },
+  },
+  {
+    slug: "water-bottles",
+    name: "Water Bottles",
+    title: "Water Bottles Collection",
+    seo: {
+      title: "Water Bottles | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop water bottles from Velocity Wear. Insulated, squeeze and shaker bottles to keep you hydrated through every session.",
+    },
+  },
+  {
+    slug: "bags",
+    name: "Bags",
+    title: "Bags Collection",
+    seo: {
+      title: "Bags | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop bags from Velocity Wear. Gym backpacks, duffels, waist packs and drawstring bags for every kind of training.",
+    },
+  },
+  {
     slug: "accessories",
     name: "Accessories",
     title: "Accessories Collection",
     seo: {
       title: "Accessories | Velocity Wear - Performance Sportswear",
       description:
-        "Shop accessories sportswear from Velocity Wear. Caps, bags and essentials to complete your kit.",
+        "Shop accessories from Velocity Wear. Socks, towels, sweatbands and gloves to complete your kit.",
     },
   },
 ];
