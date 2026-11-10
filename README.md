@@ -65,6 +65,10 @@ public/
   its `/product/<slug>` page automatically. `featured` controls the order of the
   featured lists (home, shop, related products); category pages list every product
   whose `category` matches.
+- **Shop filters:** the shop page (`/shop`) has search, category, price and sort filters
+  (`src/components/ShopFilters.tsx`, styles in `src/styles/shop-filters.css`). They work on
+  every product in `src/data/products.ts` automatically, and the current filters are kept in the
+  URL, e.g. `/shop?category=running,tennis&max=100&sort=price-asc`.
 - **Blog posts:** edit `src/data/blog.ts`. `content` is the post body as HTML.
 - **Page copy:** each page lives in `src/app/<route>/page.tsx` as regular JSX.
 - **Images:** put files in the matching folder under `public/images/` and reference them as `/images/<folder>/<file>`. Product images are `/images/products/<product-slug>.webp`.

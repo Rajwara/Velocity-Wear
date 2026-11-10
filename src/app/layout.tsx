@@ -5,6 +5,7 @@ import "@/styles/webflow.css";
 import "@/styles/lenis.css";
 import "@/styles/fonts.css";
 import "@/styles/overrides.css";
+import "@/styles/shop-filters.css";
 
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.

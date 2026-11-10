@@ -349,6 +349,11 @@ export const categories: Category[] = [
   },
 ];
 
+/** Numeric price, e.g. "$149.99" -> 149.99 */
+export function priceValue(product: Product): number {
+  return Number(product.price.replace(/[^0-9.]/g, ""));
+}
+
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
