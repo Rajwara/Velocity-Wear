@@ -1,5 +1,7 @@
 "use client";
 
+import WishlistButton from "@/components/wishlist/WishlistButton";
+
 import {
   createContext,
   useCallback,
@@ -111,6 +113,7 @@ function QuickViewBody({ p, close }: { p: QuickProduct; close: () => void }) {
           >
             Add to cart
           </button>
+          <WishlistButton slug={p.slug} name={p.name} className="qv-wish" />
         </div>
         <a className="qv-more" href={`/product/${p.slug}`}>
           View full details

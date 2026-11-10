@@ -1,0 +1,164 @@
+/* Wishlist (src/components/wishlist) */
+.wish-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  color: #0e0e0e;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+.wish-btn:focus-visible {
+  outline: 2px solid #e1ec2b;
+  outline-offset: 2px;
+}
+.wish-btn.is-saved svg {
+  animation: wish-pop 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+@keyframes wish-pop {
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+/* Round heart on product cards and in quick view */
+.wish-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.wish-icon:hover {
+  transform: scale(1.08);
+}
+.wish-icon.is-saved {
+  background: #0e0e0e;
+  color: #e1ec2b;
+}
+.shop-thumb {
+  position: relative;
+}
+.wish-on-card {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+}
+.qv-wish {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  box-shadow: none;
+  border: 1px solid #e5e5e5;
+}
+
+/* Wide button on the product page */
+.wish-full {
+  width: 100%;
+  height: 52px;
+  margin-top: 12px;
+  border: 1px solid #0e0e0e;
+  border-radius: 999px;
+  background: #fff;
+  font-family: var(--font-family--heading, Oswald, sans-serif);
+  font-size: 17px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.wish-full:hover {
+  background: #f4f4f2;
+}
+.wish-full.is-saved {
+  border-color: #0e0e0e;
+  background: #0e0e0e;
+  color: #e1ec2b;
+}
+
+/* Header heart */
+.wish-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+.wish-header-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e6e6e6;
+  color: #0e0e0e;
+}
+.wish-header:hover .wish-header-icon {
+  background: #e1ec2b;
+}
+
+/* Wishlist page */
+.wish-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #fff;
+}
+.wish-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.wish-all {
+  height: 46px;
+  padding: 0 24px;
+  border: 0;
+  cursor: pointer;
+}
+.wish-grid {
+  display: grid;
+  gap: 24px;
+}
+.wish-empty-icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 6px;
+  border-radius: 50%;
+  background: #e1ec2b;
+  color: #0e0e0e;
+}
+@media screen and (max-width: 991px) {
+  .wish-grid.shop-cols-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 767px) {
+  .wish-grid.shop-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wish-header {
+    margin-right: 6px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .wish-grid.shop-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wish-btn.is-saved svg {
+    animation: none;
+  }
+}

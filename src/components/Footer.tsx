@@ -152,6 +152,9 @@ export default function Footer({ pageId }: { pageId: string }) {
                     <NavLink aria-label="Text Link" href="/cart" className="footer-nav-link">
                       Cart
                     </NavLink>
+                    <NavLink aria-label="Text Link" href="/wishlist" className="footer-nav-link">
+                      Wishlist
+                    </NavLink>
                     <NavLink
                       aria-label="Text Link"
                       href="/privacy-policy"

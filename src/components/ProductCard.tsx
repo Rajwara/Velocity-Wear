@@ -1,3 +1,4 @@
+import WishlistButton from "@/components/wishlist/WishlistButton";
 import AddToCartForm from "@/components/cart/AddToCartForm";
 import type { Product } from "@/data/products";
 import { animationAttr, type Animation } from "@/components/animation";
@@ -14,6 +15,7 @@ export default function ProductCard({
     <div role="listitem" className="shop-item w-dyn-item" {...animationAttr(animation)}>
       <div className="shop-card">
         <div className="shop-thumb">
+          <WishlistButton slug={product.slug} name={product.name} className="wish-on-card" />
           <a
             aria-label="Link Block"
             href={`/product/${product.slug}`}

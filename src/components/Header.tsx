@@ -1,3 +1,4 @@
+import { WishlistHeaderLink } from "@/components/wishlist/WishlistButton";
 import CartButton from "@/components/cart/CartButton";
 import Button from "@/components/Button";
 import NavLink from "@/components/NavLink";
@@ -80,6 +81,7 @@ export default function Header({ variant = "base" }: { variant?: HeaderVariant }
             </div>
           </nav>
           <div className={`header-wrapp-block${brand}`}>
+            <WishlistHeaderLink countClassName={`header-text${brand}`} />
             <CartButton countClassName={`header-text${brand}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,6 +103,7 @@ export default function Header({ variant = "base" }: { variant?: HeaderVariant }
             </div>
           </div>
           <div className="header-button-block">
+            <WishlistHeaderLink countClassName={`header-text${brand}`} />
             <CartButton countClassName={`header-text${brand}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

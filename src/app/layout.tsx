@@ -10,10 +10,12 @@ import "@/styles/cart.css";
 import "@/styles/cart-page.css";
 import "@/styles/floating.css";
 import "@/styles/home-sections.css";
+import "@/styles/wishlist.css";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import FloatingActions from "@/components/floating/FloatingActions";
 import { QuickViewProvider } from "@/components/quickview/QuickView";
+import WishlistProvider from "@/components/wishlist/WishlistProvider";
 
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.
@@ -72,7 +74,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <CartProvider>
-          <QuickViewProvider>{children}</QuickViewProvider>
+          <WishlistProvider>
+            <QuickViewProvider>{children}</QuickViewProvider>
+          </WishlistProvider>
           <CartDrawer />
           <FloatingActions />
         </CartProvider>

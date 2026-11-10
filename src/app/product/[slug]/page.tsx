@@ -1,3 +1,4 @@
+import WishlistButton from "@/components/wishlist/WishlistButton";
 import AddToCartForm from "@/components/cart/AddToCartForm";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -203,6 +204,7 @@ export default async function ProductPage({ params }: Props) {
                             value="Add to Cart"
                           />
                         </AddToCartForm>
+                        <WishlistButton slug={product.slug} name={product.name} variant="full" />
                       </div>
                     </div>
                   </div>
