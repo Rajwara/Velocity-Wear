@@ -6,6 +6,9 @@ import "@/styles/lenis.css";
 import "@/styles/fonts.css";
 import "@/styles/overrides.css";
 import "@/styles/shop-filters.css";
+import "@/styles/cart.css";
+import CartProvider from "@/components/cart/CartProvider";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 export const metadata: Metadata = {
   // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.
@@ -62,7 +65,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script dangerouslySetInnerHTML={{ __html: webflowModeScript }} />
         <script dangerouslySetInnerHTML={{ __html: currencySettings }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <CartProvider>
+          {children}
+          <CartDrawer />
+        </CartProvider>
+      </body>
     </html>
   );
 }

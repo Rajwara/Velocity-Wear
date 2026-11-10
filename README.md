@@ -93,10 +93,14 @@ animated elements until the Webflow interactions have initialised, as in the exp
 The export came from a Webflow Ecommerce site, and these features need a service
 behind them:
 
-- Add to cart, the cart drawer and checkout (Webflow Ecommerce APIs)
+- Checkout and payment (the cart itself works: see below)
 - Newsletter and contact forms
 - Log in / sign up / reset password, and the password-protected page
 
-For now, submitting a form, adding to cart or clicking checkout shows a short demo
-notice (see `installDemoAdapters` in `src/components/WebflowRuntime.tsx`). Replace
+The cart works without a backend: `src/components/cart/` keeps it in the visitor's
+browser (localStorage), with a slide-out cart drawer and the item count in the header.
+When you add a payment provider (e.g. Stripe or Shopify), point the drawer's Checkout
+button at it.
+
+For now, submitting a form or clicking checkout shows a short demo notice (see `installDemoAdapters` in `src/components/WebflowRuntime.tsx`). Replace
 those handlers with your own API routes or services when you connect a backend.

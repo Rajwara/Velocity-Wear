@@ -1,3 +1,4 @@
+import AddToCartForm from "@/components/cart/AddToCartForm";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
@@ -176,20 +177,10 @@ export default async function ProductPage({ params }: Props) {
                     </div>
                     <div className="product-cart-block">
                       <div className="product-cart">
-                        <form
-                          data-node-type="commerce-add-to-cart-form"
-                          data-commerce-sku-id={product.skuId}
-                          data-commerce-product-id={product.productId}
+                        <AddToCartForm
+                          slug={product.slug}
                           className="w-commerce-commerceaddtocartform product-default"
                         >
-                          <div
-                            data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
-                            data-commerce-product-sku-values="%7B%7D"
-                            data-node-type="commerce-add-to-cart-option-list"
-                            data-commerce-product-id={product.productId}
-                            data-preselect-default-variant="false"
-                            role="group"
-                          />
                           <label
                             htmlFor="quantity-c78f4bf34b22f8525118f52cf663e99a"
                             className="product-content"
@@ -201,59 +192,17 @@ export default async function ProductPage({ params }: Props) {
                             pattern="^[0-9]+$"
                             inputMode="numeric"
                             id="quantity-c78f4bf34b22f8525118f52cf663e99a"
-                            name="commerce-add-to-cart-quantity-input"
+                            name="quantity"
                             min="1"
                             className="w-commerce-commerceaddtocartquantityinput product-quantity"
                             defaultValue="1"
                           />
                           <input
                             type="submit"
-                            data-node-type="commerce-add-to-cart-button"
-                            data-loading-text="Adding to cart..."
-                            aria-busy="false"
-                            aria-haspopup="dialog"
                             className="w-commerce-commerceaddtocartbutton product-addbutton"
                             value="Add to Cart"
                           />
-                          <a
-                            data-node-type="commerce-buy-now-button"
-                            aria-busy="false"
-                            aria-haspopup="false"
-                            data-default-text="Buy now"
-                            data-subscription-text="Subscribe now"
-                            style={{ display: "none" }}
-                            className="w-commerce-commercebuynowbutton product-buybutton"
-                            href="/checkout"
-                          >
-                            Buy now
-                          </a>
-                        </form>
-                        <div
-                          style={{ display: "none" }}
-                          className="w-commerce-commerceaddtocartoutofstock product-stock"
-                          tabIndex={0}
-                        >
-                          <div className="product-sms">This product is out of stock.</div>
-                        </div>
-                        <div
-                          aria-live="assertive"
-                          data-node-type="commerce-add-to-cart-error"
-                          style={{ display: "none" }}
-                          className="w-commerce-commerceaddtocarterror product-error"
-                        >
-                          <div
-                            data-node-type="commerce-add-to-cart-error"
-                            className="product-sms"
-                            data-w-add-to-cart-quantity-error="Product is not available in this quantity."
-                            data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
-                            data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
-                            data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
-                            data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
-                            data-w-add-to-cart-select-all-options-error="Please select an option in each set."
-                          >
-                            Product is not available in this quantity.
-                          </div>
-                        </div>
+                        </AddToCartForm>
                       </div>
                     </div>
                   </div>

@@ -51,21 +51,19 @@ function showMessage(text: string) {
 }
 
 /**
- * Stand-ins for the parts that need a backend (forms, cart, checkout).
+ * Stand-ins for the parts that need a backend (forms and checkout; the cart itself lives in src/components/cart).
  * Replace these with real handlers when you connect a commerce / email service.
  */
 function installDemoAdapters() {
   document.addEventListener(
     "submit",
     (e) => {
+      const form = e.target as HTMLElement;
+      // Add-to-cart forms are handled by the cart (src/components/cart).
+      if (form.closest("[data-cart-form]")) return;
       e.preventDefault();
       e.stopImmediatePropagation();
-      const form = e.target as HTMLElement;
-      if (form.matches('[data-node-type="commerce-add-to-cart-form"]')) {
-        showMessage("Demo: product selected. Connect an ecommerce backend to accept orders.");
-      } else {
-        showMessage("Demo form: connect your email or account service to enable submissions.");
-      }
+      showMessage("Demo form: connect your email or account service to enable submissions.");
     },
     true,
   );

@@ -1,5 +1,40 @@
 /* Local additions; original responsive design is in assets/*.css. */
-html{scroll-behavior:smooth}button,a,input{touch-action:manipulation}
-:focus-visible{outline:2px solid #d5ec00;outline-offset:4px}
-.clone-message{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:2147483647;background:#151916;color:#fff;padding:16px 24px;border-radius:8px;max-width:90vw;font:16px Arial,sans-serif;box-shadow:0 4px 30px #0003}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+html {
+  scroll-behavior: smooth;
+}
+button,
+a,
+input {
+  touch-action: manipulation;
+}
+:focus-visible {
+  outline: 2px solid #d5ec00;
+  outline-offset: 4px;
+}
+.clone-message {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  background: #151916;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  max-width: 90vw;
+  font:
+    16px Arial,
+    sans-serif;
+  box-shadow: 0 4px 30px #0003;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
