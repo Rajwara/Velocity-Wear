@@ -4,11 +4,12 @@ import SiteShell from "@/components/SiteShell";
 export const metadata: Metadata = {
   title: "Contact | Velocity Wear - Performance Sportswear",
   description:
-    "Contact Velocity Wear for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
+    "Contact Velocity Wear for help with products, sizing, orders, returns and anything else about your kit.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Contact | Velocity Wear - Performance Sportswear",
     description:
-      "Contact Velocity Wear for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
+      "Contact Velocity Wear for help with products, sizing, orders, returns and anything else about your kit.",
   },
 };
 
@@ -34,7 +35,7 @@ export default function Page() {
                   <div className="contact-title">sports</div>
                 </div>
                 <div className="contact-title-wrap">
-                  <div className="contact-title">gear specialist</div>
+                  <div className="contact-title">sportswear specialist</div>
                 </div>
               </div>
               <div className="contact-text-block">
@@ -150,8 +151,8 @@ export default function Page() {
                 </div>
                 <div className="contact-image-block">
                   <img
-                    src="/assets/de0cd4f6ef-6aa12c9af03533b5cc0459b0_e8787c3fd86958a09f84900bac1cc2bd_Contact-Our-Sports-Gear-Specialist.webp"
-                    alt="Contact Our Sprots Gear Specialist"
+                    src="/images/pages/contact.webp"
+                    alt="Talk to Our Sportswear Specialists"
                     className="contact-image"
                   />
                 </div>

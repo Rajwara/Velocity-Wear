@@ -15,7 +15,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const category = getBlogCategory((await params).slug);
   if (!category) return {};
-  return { title: category.seo.title, description: category.seo.description };
+  return {
+    title: category.seo.title,
+    description: category.seo.description,
+    openGraph: { images: ["/images/social/blog.webp"] },
+  };
 }
 
 export default async function BlogCategoryPage({ params }: Props) {

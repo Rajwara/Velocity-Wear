@@ -3,13 +3,14 @@ import SiteShell from "@/components/SiteShell";
 import BenefitsSection from "@/components/BenefitsSection";
 import ProductCard from "@/components/ProductCard";
 import ShopCategoryNav from "@/components/ShopCategoryNav";
-import { getProducts } from "@/data/products";
+import { getFeaturedProducts } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Shop | Velocity Wear - Performance Sportswear",
   description:
     "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Shop | Velocity Wear - Performance Sportswear",
     description:
       "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
@@ -30,7 +31,7 @@ export default function Page() {
             <div className="shop-block">
               <div className="shop-title-block">
                 <h1 hero-text="" className="shop-title">
-                  Velocity Wear Equipment
+                  Velocity Wear Collection
                 </h1>
               </div>
               <div className="shop-post-block">
@@ -47,14 +48,7 @@ export default function Page() {
                   >
                     <div className="shop-wrapp w-dyn-list">
                       <div role="list" className="shop-list w-dyn-items">
-                        {getProducts([
-                          "pro-football-boots",
-                          "cricket-bat",
-                          "football",
-                          "badminton-racket",
-                          "hockey-bat",
-                          "tennis-ball",
-                        ]).map((product) => (
+                        {getFeaturedProducts().map((product) => (
                           <ProductCard key={product.slug} product={product} />
                         ))}
                       </div>

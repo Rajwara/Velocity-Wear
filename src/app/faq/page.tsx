@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Find answers to common questions about Velocity Wear, including sports products, orders, shipping, returns, refunds, checkout, and online store support.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "FAQ | Velocity Wear - Performance Sportswear",
     description:
       "Find answers to common questions about Velocity Wear, including sports products, orders, shipping, returns, refunds, checkout, and online store support.",
@@ -35,7 +36,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">1</div>
-                        <div className="faq-text">What types of sports equipment do you sell?</div>
+                        <div className="faq-text">What types of sportswear do you sell?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -72,8 +73,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        We sell sports equipment and gear for baseball, hockey, football, cricket,
-                        badminton, and other athletic activities.
+                        We sell performance sportswear for running, training, football and tennis,
+                        plus outerwear and accessories.
                       </div>
                     </div>
                   </div>
@@ -81,7 +82,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">3</div>
-                        <div className="faq-text">Do you offer fast shipping for sports gear?</div>
+                        <div className="faq-text">Do you offer fast shipping?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -119,8 +120,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        Yes, we offer fast shipping options for sports gear, helping customers
-                        receive their orders quickly and conveniently.
+                        Yes, we offer fast shipping options on all orders, helping customers receive
+                        their orders quickly and conveniently.
                       </div>
                     </div>
                   </div>
@@ -128,7 +129,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">5</div>
-                        <div className="faq-text">How long does sports gear delivery take?</div>
+                        <div className="faq-text">How long does delivery take?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -175,7 +176,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">7</div>
-                        <div className="faq-text">How can I track my sports equipment order?</div>
+                        <div className="faq-text">How can I track my order?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -214,7 +215,7 @@ export default function Page() {
                     <div className="faq-ans">
                       <div className="faq-cont">
                         After your order ships, use the tracking information provided to monitor
-                        your sports equipment delivery status online.
+                        your order&apos;s delivery status online.
                       </div>
                     </div>
                   </div>
@@ -224,7 +225,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">2</div>
-                        <div className="faq-text">How do I choose the right sports gear?</div>
+                        <div className="faq-text">How do I choose the right size?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -262,8 +263,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        Choose sports gear based on your activity, skill level, performance needs,
-                        and preferred equipment specifications.
+                        Use the size guide on each product page and choose based on your
+                        measurements and how you like your kit to fit.
                       </div>
                     </div>
                   </div>
@@ -414,7 +415,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">1</div>
-                        <div className="faq-text">What types of sports equipment do you sell?</div>
+                        <div className="faq-text">What types of sportswear do you sell?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -451,8 +452,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        We sell sports equipment and gear for baseball, hockey, football, cricket,
-                        badminton, and other athletic activities.
+                        We sell performance sportswear for running, training, football and tennis,
+                        plus outerwear and accessories.
                       </div>
                     </div>
                   </div>
@@ -460,7 +461,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">2</div>
-                        <div className="faq-text">How do I choose the right sports gear?</div>
+                        <div className="faq-text">How do I choose the right size?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -498,8 +499,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        Choose sports gear based on your activity, skill level, performance needs,
-                        and preferred equipment specifications.
+                        Use the size guide on each product page and choose based on your
+                        measurements and how you like your kit to fit.
                       </div>
                     </div>
                   </div>
@@ -507,7 +508,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">3</div>
-                        <div className="faq-text">Do you offer fast shipping for sports gear?</div>
+                        <div className="faq-text">Do you offer fast shipping?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -545,8 +546,8 @@ export default function Page() {
                     </div>
                     <div className="faq-ans">
                       <div className="faq-cont">
-                        Yes, we offer fast shipping options for sports gear, helping customers
-                        receive their orders quickly and conveniently.
+                        Yes, we offer fast shipping options on all orders, helping customers receive
+                        their orders quickly and conveniently.
                       </div>
                     </div>
                   </div>
@@ -601,7 +602,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">5</div>
-                        <div className="faq-text">How long does sports gear delivery take?</div>
+                        <div className="faq-text">How long does delivery take?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -695,7 +696,7 @@ export default function Page() {
                     <div className="faq-que">
                       <div className="faq-wrap">
                         <div className="faq-num">7</div>
-                        <div className="faq-text">How can I track my sports equipment order?</div>
+                        <div className="faq-text">How can I track my order?</div>
                       </div>
                       <div className="faq-icon">
                         <svg
@@ -734,7 +735,7 @@ export default function Page() {
                     <div className="faq-ans">
                       <div className="faq-cont">
                         After your order ships, use the tracking information provided to monitor
-                        your sports equipment delivery status online.
+                        your order&apos;s delivery status online.
                       </div>
                     </div>
                   </div>

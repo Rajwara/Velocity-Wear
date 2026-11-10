@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Changelog | Velocity Wear - Performance Sportswear",
   description: "See the latest updates, improvements and fixes to the Velocity Wear website.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Changelog | Velocity Wear - Performance Sportswear",
     description: "See the latest updates, improvements and fixes to the Velocity Wear website.",
   },

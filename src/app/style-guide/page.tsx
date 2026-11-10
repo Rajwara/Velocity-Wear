@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     "Explore Velocity Wear’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Style Guide | Velocity Wear - Performance Sportswear",
     description:
       "Explore Velocity Wear’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",

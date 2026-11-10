@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "View Velocity Wear’s licenses for information about assets, usage rights, third-party resources and licensing terms.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Licenses | Velocity Wear - Performance Sportswear",
     description:
       "View Velocity Wear’s licenses for information about assets, usage rights, third-party resources and licensing terms.",

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Protected | Velocity Wear - Performance Sportswear",
   description: "This Velocity Wear page is password protected.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Protected | Velocity Wear - Performance Sportswear",
     description: "This Velocity Wear page is password protected.",
   },

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Learn about Velocity Wear, a performance sportswear brand built for athletes who train hard and move fast.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "About | Velocity Wear - Performance Sportswear",
     description:
       "Learn about Velocity Wear, a performance sportswear brand built for athletes who train hard and move fast.",
@@ -27,17 +28,17 @@ export default function Page() {
               <div hero-text="" className="about-hero-info">
                 <div className="review-img">
                   <img
-                    src="/assets/116c973861-6aa385c04c4242dee31e208f_Review-Image-01.webp"
+                    src="/images/people/review-1.webp"
                     alt=""
                     className="review-image item-one"
                   />
                   <img
-                    src="/assets/f36358d708-6aa385c3632b1efbd0f42516_Review-Image-02.webp"
+                    src="/images/people/review-2.webp"
                     alt=""
                     className="review-image item-two"
                   />
                   <img
-                    src="/assets/817be2fcfd-6aa385c6197cf42097204306_Review-Image-03.webp"
+                    src="/images/people/review-3.webp"
                     alt=""
                     className="review-image item-three"
                   />
@@ -80,7 +81,7 @@ export default function Page() {
                 Experience Sports Like Never Before
               </h1>
               <img
-                src="/assets/c1b0880ba4-6aa38264753874df44cf2fe9_Fuel-Your-Passion-for-Sports.webp"
+                src="/images/about/fuel-your-passion.webp"
                 alt="Fuel Your Passion for Sports"
                 className="about-hero-image"
               />
@@ -363,8 +364,8 @@ export default function Page() {
                     </div>
                   </div>
                   <div
-                    data-poster-url="/assets/145b4b7828-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_poster.0000000.jpg"
-                    data-video-urls="/assets/ecc84abb78-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_mp4.mp4,/assets/6a06cdf8d6-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_webm.webm"
+                    data-poster-url="/images/about/video-poster.webp"
+                    data-video-urls="/videos/brand-story.mp4,/videos/brand-story.webm"
                     data-autoplay="false"
                     data-loop="true"
                     data-wf-ignore="true"
@@ -375,25 +376,19 @@ export default function Page() {
                     <video
                       id="c309c292-0b31-3f9c-8b22-48d54c0a3604-video"
                       loop
-                      style={{ backgroundImage: 'url("/assets/video-poster.jpg")' }}
+                      style={{ backgroundImage: 'url("/images/about/video-poster.webp")' }}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
                     >
-                      <source
-                        src="/assets/ecc84abb78-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_mp4.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="/assets/6a06cdf8d6-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_webm.webm"
-                        data-wf-ignore="true"
-                      />
+                      <source src="/videos/brand-story.mp4" data-wf-ignore="true" />
+                      <source src="/videos/brand-story.webm" data-wf-ignore="true" />
                     </video>
                     <noscript
                       dangerouslySetInnerHTML={{
                         __html:
-                          '<style> [data-wf-bgvideo-fallback-img] { display: none; } @media (prefers-reduced-motion: reduce) { [data-wf-bgvideo-fallback-img] { position: absolute; z-index: -100; display: inline-block; height: 100%; width: 100%; object-fit: cover; } }</style><img data-wf-bgvideo-fallback-img="true" src="/assets/145b4b7828-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_poster.0000000.jpg" alt="">',
+                          '<style> [data-wf-bgvideo-fallback-img] { display: none; } @media (prefers-reduced-motion: reduce) { [data-wf-bgvideo-fallback-img] { position: absolute; z-index: -100; display: inline-block; height: 100%; width: 100%; object-fit: cover; } }</style><img data-wf-bgvideo-fallback-img="true" src="/images/about/video-poster.webp" alt="">',
                       }}
                     />
                     <div aria-live="polite">
@@ -556,8 +551,8 @@ export default function Page() {
                 </div>
                 <div className="story-video-block">
                   <div
-                    data-poster-url="/assets/145b4b7828-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_poster.0000000.jpg"
-                    data-video-urls="/assets/ecc84abb78-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_mp4.mp4,/assets/6a06cdf8d6-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_webm.webm"
+                    data-poster-url="/images/about/video-poster.webp"
+                    data-video-urls="/videos/brand-story.mp4,/videos/brand-story.webm"
                     data-autoplay="false"
                     data-loop="true"
                     data-wf-ignore="true"
@@ -567,25 +562,19 @@ export default function Page() {
                     <video
                       id="8da587b8-0dbc-8da3-e8d4-db2f9990b65f-video"
                       loop
-                      style={{ backgroundImage: 'url("/assets/video-poster.jpg")' }}
+                      style={{ backgroundImage: 'url("/images/about/video-poster.webp")' }}
                       muted
                       playsInline
                       data-wf-ignore="true"
                       data-object-fit="cover"
                     >
-                      <source
-                        src="/assets/ecc84abb78-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_mp4.mp4"
-                        data-wf-ignore="true"
-                      />
-                      <source
-                        src="/assets/6a06cdf8d6-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_webm.webm"
-                        data-wf-ignore="true"
-                      />
+                      <source src="/videos/brand-story.mp4" data-wf-ignore="true" />
+                      <source src="/videos/brand-story.webm" data-wf-ignore="true" />
                     </video>
                     <noscript
                       dangerouslySetInnerHTML={{
                         __html:
-                          '<style> [data-wf-bgvideo-fallback-img] { display: none; } @media (prefers-reduced-motion: reduce) { [data-wf-bgvideo-fallback-img] { position: absolute; z-index: -100; display: inline-block; height: 100%; width: 100%; object-fit: cover; } }</style><img data-wf-bgvideo-fallback-img="true" src="/assets/145b4b7828-6a9f93205a63e5051cc64762-6ab4ebd1c6fcf3d14c427b91_Fitness-Equipment-Exercise-Gear_poster.0000000.jpg" alt="">',
+                          '<style> [data-wf-bgvideo-fallback-img] { display: none; } @media (prefers-reduced-motion: reduce) { [data-wf-bgvideo-fallback-img] { position: absolute; z-index: -100; display: inline-block; height: 100%; width: 100%; object-fit: cover; } }</style><img data-wf-bgvideo-fallback-img="true" src="/images/about/video-poster.webp" alt="">',
                       }}
                     />
                     <div aria-live="polite">
@@ -634,7 +623,7 @@ export default function Page() {
                 <div className="story-wrapp-block">
                   <div text-animation="" className="story-thumb">
                     <img
-                      src="/assets/423278a317-6ab4edc891aa2eb80b311944_Our-Mission-and-Vision.webp"
+                      src="/images/about/mission.webp"
                       loading="lazy"
                       alt="Person dressed in white jacket, pink pants, and pink cap jumping energetically against an orange gradient background."
                       className="story-image"
@@ -682,7 +671,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/90694275ee-6aa38cdd8535047b5e2e4e8e_35a71f97d499e633c4a49e11676ab06c_Leading-Brands-01.svg"
+                        src="/images/partners/placeholder-01.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -695,7 +684,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/f3c46be56b-6aa38cdd8535047b5e2e4e8f_8686f30a961684a0fdfce76037eec80f_Leading-Brands-02.svg"
+                        src="/images/partners/placeholder-02.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -708,7 +697,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/69a2d86792-6aa38cdd8535047b5e2e4e87_74e628accd1778959bae21ceb672f94f_Leading-Brands-03.svg"
+                        src="/images/partners/placeholder-03.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo three"
@@ -721,7 +710,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/87ab917784-6aa38cdd8535047b5e2e4e88_449365af5fbec43f880c6bcc7bff9cb4_Leading-Brands-04.svg"
+                        src="/images/partners/placeholder-04.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -734,7 +723,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/3db27c99bf-6aa38cdd8535047b5e2e4e8c_0bc10c0b421cd4c32dbf3b7646a9d35a_Leading-Brands-05.svg"
+                        src="/images/partners/placeholder-05.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -747,7 +736,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/4698052b99-6aa38cdd8535047b5e2e4e8b_7b35fbde0b1ed801c4dd1e04ba399752_Leading-Brands-06.svg"
+                        src="/images/partners/placeholder-06.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -760,7 +749,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/2f15ea6751-6aa38cdd8535047b5e2e4e89_ddcd423b13ed8b9f2ebccf3fba12ac3a_Leading-Brands-07.svg"
+                        src="/images/partners/placeholder-07.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -773,7 +762,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/0d3ca501e1-6aa38cdd8535047b5e2e4e8a_a0134cdf3cff3d9c0857a0fd09e19326_Leading-Brands-08.svg"
+                        src="/images/partners/placeholder-08.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -786,7 +775,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/1a4be35755-6aa38cdd8535047b5e2e4e8d_d08ed12c5a2dc9710747739843146a8d_Leading-Brands-09.svg"
+                        src="/images/partners/placeholder-09.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -799,7 +788,7 @@ export default function Page() {
                       className="steps-brand-card w-inline-block"
                     >
                       <img
-                        src="/assets/5a7dc4ff04-6aa38cdd8535047b5e2e4e86_e32c473acc4e891ba7127b0df243646b_Leading-Brands-10.svg"
+                        src="/images/partners/placeholder-10.svg"
                         loading="lazy"
                         alt="Leading Brands"
                         className="story-logo"
@@ -812,9 +801,9 @@ export default function Page() {
                   <div animated-process="" className="steps-wrapp">
                     <div data-w-id="c309c292-0b31-3f9c-8b22-48d54c0a360e" className="steps-card">
                       <div className="steps-num">01/</div>
-                      <div className="steps-title">Premium Quality Gear</div>
+                      <div className="steps-title">Premium Quality Fabrics</div>
                       <div className="steps-text">
-                        Carefully selected sports equipment designed for durability, and long use.
+                        Technical fabrics designed for comfort, durability and long use.
                       </div>
                     </div>
                     <div
@@ -836,8 +825,7 @@ export default function Page() {
                       <div className="steps-num">03/</div>
                       <div className="steps-title">Affordable Pricing</div>
                       <div className="steps-text">
-                        Competitive prices that make high-quality sports gear accessible to
-                        everyone.
+                        Fair prices that make high-quality sportswear accessible to everyone.
                       </div>
                     </div>
                     <div
@@ -848,8 +836,8 @@ export default function Page() {
                       <div className="steps-num">04/</div>
                       <div className="steps-title">Wide Product Selection</div>
                       <div className="steps-text">
-                        Explore a large collection of equipment for multiple sports and outdoor
-                        activities.
+                        Explore a wide collection of sportswear for running, training, football,
+                        tennis and outdoor activities.
                       </div>
                     </div>
                   </div>
@@ -873,10 +861,9 @@ export default function Page() {
                       <div className="global-slide w-slide">
                         <div className="steps-card">
                           <div className="steps-num">01/</div>
-                          <div className="steps-title">Premium Quality Gear</div>
+                          <div className="steps-title">Premium Quality Fabrics</div>
                           <div className="steps-text">
-                            Carefully selected sports equipment designed for durability, and long
-                            use.
+                            Technical fabrics designed for comfort, durability and long use.
                           </div>
                         </div>
                       </div>
@@ -894,8 +881,7 @@ export default function Page() {
                           <div className="steps-num">03/</div>
                           <div className="steps-title">Affordable Pricing</div>
                           <div className="steps-text">
-                            Competitive prices that make high-quality sports gear accessible to
-                            everyone.
+                            Fair prices that make high-quality sportswear accessible to everyone.
                           </div>
                         </div>
                       </div>
@@ -904,8 +890,8 @@ export default function Page() {
                           <div className="steps-num">04/</div>
                           <div className="steps-title">Wide Product Selection</div>
                           <div className="steps-text">
-                            Explore a large collection of equipment for multiple sports and outdoor
-                            activities.
+                            Explore a wide collection of sportswear for running, training, football,
+                            tennis and outdoor activities.
                           </div>
                         </div>
                       </div>
@@ -943,7 +929,7 @@ export default function Page() {
                       <div className="team-card item-one">
                         <div data-w-id="f98a8358-4a31-bba3-073f-ab650d9023dd" className="team-cont">
                           <img
-                            src="/assets/18a1e43369-6aa39d12c61e89106b08012e_bcddc836d1d1cd766d0daf947cb7a6a2_Daniel.webp"
+                            src="/images/team/member-1.webp"
                             loading="lazy"
                             alt="Daniel Brooks"
                             className="team-image"
@@ -957,7 +943,7 @@ export default function Page() {
                       <div className="team-card item-two">
                         <div data-w-id="f98a8358-4a31-bba3-073f-ab650d9023d3" className="team-cont">
                           <img
-                            src="/assets/f12bb6dcea-6aa39d12c61e89106b080133_ddb28db0c76fd504a85305bceb5a15c7_Alex-Carter.webp"
+                            src="/images/team/member-3.webp"
                             loading="lazy"
                             alt="Alex Carter"
                             className="team-image"
@@ -971,7 +957,7 @@ export default function Page() {
                       <div className="team-card item-three">
                         <div data-w-id="f98a8358-4a31-bba3-073f-ab650d9023e7" className="team-cont">
                           <img
-                            src="/assets/2fd8dec15e-6aa39d12c61e89106b080138_4a9be71f8314c30f8ce4c8cc87ada903_Sophia.webp"
+                            src="/images/team/member-2.webp"
                             loading="lazy"
                             alt="Sophia Miller"
                             className="team-image"
@@ -1010,7 +996,7 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                            src="/images/people/testimonial-jason.webp"
                             alt="Jason Miller"
                             className="client-image"
                           />
@@ -1053,7 +1039,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Football Equipments</div>
+                        <div className="client-role">Bought Football Boots</div>
                       </div>
                     </div>
                     <div animated-step="" className="client-card">
@@ -1061,18 +1047,18 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/bbe9082c98-6aa3c5d4db8cb6391924844a_f073fdf74fc3ed9f64a3c9513b894a14_Amelia-Harris.jpg"
-                            alt="Kane Wilsom"
+                            src="/images/people/testimonial-amelia.webp"
+                            alt="Amelia Harris"
                             className="client-image"
                           />
                           <div className="client-conte">
-                            <div className="client-author">Kane Wilsom</div>
+                            <div className="client-author">Amelia Harris</div>
                             <div className="client-design">Fitness Enthusiast</div>
                           </div>
                         </div>
                         <div className="client-text">
-                          “I ordered gym equipment and delivery was fast. Everything feels durable
-                          and premium quality.”
+                          “I ordered training leggings and a sports bra and delivery was fast. The
+                          fit and fabric feel really premium.”
                         </div>
                       </div>
                       <div className="client-inform">
@@ -1104,7 +1090,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Gym Equipment</div>
+                        <div className="client-role">Bought Training Leggings</div>
                       </div>
                     </div>
                     <div animated-step="" className="client-card">
@@ -1112,18 +1098,18 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/b8574d0810-6aa3c5d4db8cb63919248447_3eefb6c2dfe613d7d619d315cd7d7586_Sarah-Thompson.jpg"
+                            src="/images/people/testimonial-sarah.webp"
                             alt="Sarah Thompson"
                             className="client-image"
                           />
                           <div className="client-conte">
                             <div className="client-author">Sarah Thompson</div>
-                            <div className="client-design">Passionate Cricketer</div>
+                            <div className="client-design">Marathon Runner</div>
                           </div>
                         </div>
                         <div className="client-text">
-                          “The quality of the football boots is outstanding. Super comfortable and
-                          perfect grip on the field.”
+                          “My Pace running shoes feel light and springy even at the end of a long
+                          run. Easily the best pair I have trained in.”
                         </div>
                       </div>
                       <div className="client-inform">
@@ -1155,7 +1141,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Cricket Equipments</div>
+                        <div className="client-role">Bought Running Shoes</div>
                       </div>
                     </div>
                   </div>
@@ -1182,7 +1168,7 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                                src="/images/people/testimonial-jason.webp"
                                 alt="Jason Miller"
                                 className="client-image"
                               />
@@ -1225,7 +1211,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Football Equipments</div>
+                            <div className="client-role">Bought Football Boots</div>
                           </div>
                         </div>
                       </div>
@@ -1235,18 +1221,18 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/bbe9082c98-6aa3c5d4db8cb6391924844a_f073fdf74fc3ed9f64a3c9513b894a14_Amelia-Harris.jpg"
-                                alt="Kane Wilsom"
+                                src="/images/people/testimonial-amelia.webp"
+                                alt="Amelia Harris"
                                 className="client-image"
                               />
                               <div className="client-conte">
-                                <div className="client-author">Kane Wilsom</div>
+                                <div className="client-author">Amelia Harris</div>
                                 <div className="client-design">Fitness Enthusiast</div>
                               </div>
                             </div>
                             <div className="client-text">
-                              “I ordered gym equipment and delivery was fast. Everything feels
-                              durable and premium quality.”
+                              “I ordered training leggings and a sports bra and delivery was fast.
+                              The fit and fabric feel really premium.”
                             </div>
                           </div>
                           <div className="client-inform">
@@ -1278,7 +1264,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Gym Equipment</div>
+                            <div className="client-role">Bought Training Leggings</div>
                           </div>
                         </div>
                       </div>
@@ -1288,18 +1274,18 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/b8574d0810-6aa3c5d4db8cb63919248447_3eefb6c2dfe613d7d619d315cd7d7586_Sarah-Thompson.jpg"
+                                src="/images/people/testimonial-sarah.webp"
                                 alt="Sarah Thompson"
                                 className="client-image"
                               />
                               <div className="client-conte">
                                 <div className="client-author">Sarah Thompson</div>
-                                <div className="client-design">Passionate Cricketer</div>
+                                <div className="client-design">Marathon Runner</div>
                               </div>
                             </div>
                             <div className="client-text">
-                              “The quality of the football boots is outstanding. Super comfortable
-                              and perfect grip on the field.”
+                              “My Pace running shoes feel light and springy even at the end of a
+                              long run. Easily the best pair I have trained in.”
                             </div>
                           </div>
                           <div className="client-inform">
@@ -1331,7 +1317,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Cricket Equipments</div>
+                            <div className="client-role">Bought Running Shoes</div>
                           </div>
                         </div>
                       </div>

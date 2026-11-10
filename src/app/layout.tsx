@@ -7,31 +7,34 @@ import "@/styles/fonts.css";
 import "@/styles/overrides.css";
 
 export const metadata: Metadata = {
+  // Set NEXT_PUBLIC_SITE_URL to your live domain so share images get absolute URLs.
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  openGraph: { siteName: "Velocity Wear", images: ["/images/social/default.webp"] },
   title: "Velocity Wear - Performance Sportswear",
   icons: {
     icon: [
       {
-        url: "/assets/a0a6986749-6ab6312528eead3b5c6d9aa6_Icon.png",
+        url: "/images/brand/favicon-32.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/assets/fd0b25bb0b-6ab6312547fcb3c20786d28d_Icon.png",
+        url: "/images/brand/favicon-48.png",
         sizes: "48x48",
         type: "image/png",
       },
       {
-        url: "/assets/cfe2f946be-6ab63125707dea9c2f7ed219_Icon.png",
+        url: "/images/brand/icon-192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        url: "/assets/9728b2af3d-6ab63125c1583bbf4767f7a5_Icon.png",
+        url: "/images/brand/icon-512.png",
         sizes: "512x512",
         type: "image/png",
       },
     ],
-    apple: { url: "/assets/37f8645bf2-6ab631253deda3165eaf2fbd_Icon.png", sizes: "180x180" },
+    apple: { url: "/images/brand/apple-touch-icon.png", sizes: "180x180" },
   },
   twitter: { card: "summary_large_image" },
 };

@@ -14,11 +14,7 @@ export default function NotFound() {
           <div className="w-layout-blockcontainer main-container w-container">
             <div hero-text="" className="error-block">
               <div className="error-details">
-                <img
-                  src="/assets/132a8f6239-6aa0d888b785a137b70481b9_3c4b08d991b2c8824d938a84bd3f836b_404-Error.webp"
-                  alt="404 Error"
-                  className="error-image"
-                />
+                <img src="/images/pages/not-found.webp" alt="404 Error" className="error-image" />
                 <h1 className="error-name">Page Not Found</h1>
               </div>
               <div className="error-button">

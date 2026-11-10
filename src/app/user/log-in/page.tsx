@@ -4,11 +4,12 @@ import WebflowPage from "@/components/WebflowPage";
 export const metadata: Metadata = {
   title: "Log In | Velocity Wear - Performance Sportswear",
   description:
-    "Log in to Velocity Wear to manage your account, track sports gear orders, access personalized shopping features, and enjoy a seamless online experience.",
+    "Log in to Velocity Wear to manage your account, track your orders, access personalized shopping features, and enjoy a seamless online experience.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Log In | Velocity Wear - Performance Sportswear",
     description:
-      "Log in to Velocity Wear to manage your account, track sports gear orders, access personalized shopping features, and enjoy a seamless online experience.",
+      "Log in to Velocity Wear to manage your account, track your orders, access personalized shopping features, and enjoy a seamless online experience.",
   },
 };
 
@@ -17,18 +18,10 @@ export default function Page() {
     <WebflowPage pageId="6ab503ea43e437a1b6548e37" bundle="default" styles={pageStyles}>
       <div className="user-wrapper">
         <div className="user-thumb">
-          <img
-            src="/assets/0d7474b796-6ab504cf08282cc1c2b72383_Log-In.webp"
-            alt="Log In"
-            className="user-image"
-          />
+          <img src="/images/pages/log-in.webp" alt="Log In" className="user-image" />
           <div className="user-detail">
             <a href="/" className="user-brand w-inline-block">
-              <img
-                src="/assets/velocity-wear-logo-dark.svg"
-                alt="Velocity Wear"
-                className="user-logo"
-              />
+              <img src="/images/brand/logo-dark.svg" alt="Velocity Wear" className="user-logo" />
             </a>
             <div className="user-inform">
               <div className="user-except">
@@ -38,7 +31,7 @@ export default function Page() {
               <div className="user-author">
                 <img
                   loading="lazy"
-                  src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                  src="/images/people/testimonial-jason.webp"
                   alt="Jason Miller"
                   className="user-photo"
                 />

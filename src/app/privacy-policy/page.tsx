@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Privacy Policy | Velocity Wear - Performance Sportswear",
     description:
       "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",

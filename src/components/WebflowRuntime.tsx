@@ -24,9 +24,9 @@ declare global {
  * starts as soon as its script runs: load the animation libraries first.
  */
 const ANIMATION_LIBS = [
-  "/webflow/lenis.min.js",
-  "/webflow/gsap.min.js",
-  "/webflow/ScrollTrigger.min.js",
+  "/vendor/lenis.min.js",
+  "/vendor/gsap.min.js",
+  "/vendor/ScrollTrigger.min.js",
 ];
 
 function loadScript(src: string) {

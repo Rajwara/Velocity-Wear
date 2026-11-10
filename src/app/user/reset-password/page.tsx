@@ -4,11 +4,12 @@ import WebflowPage from "@/components/WebflowPage";
 export const metadata: Metadata = {
   title: "Reset Password | Velocity Wear - Performance Sportswear",
   description:
-    "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
+    "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sportswear with confidence.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Reset Password | Velocity Wear - Performance Sportswear",
     description:
-      "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
+      "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sportswear with confidence.",
   },
 };
 
@@ -18,17 +19,13 @@ export default function Page() {
       <div className="user-wrapper">
         <div className="user-thumb">
           <img
-            src="/assets/d227080c6a-6ab505eafe81b221e0bb0ae6_Forgot-Password.webp"
+            src="/images/pages/reset-password.webp"
             alt="Forgot Password"
             className="user-image"
           />
           <div className="user-detail">
             <a aria-label="Brand" href="/" className="user-brand w-inline-block">
-              <img
-                src="/assets/velocity-wear-logo-dark.svg"
-                alt="Velocity Wear"
-                className="user-logo"
-              />
+              <img src="/images/brand/logo-dark.svg" alt="Velocity Wear" className="user-logo" />
             </a>
             <div className="user-inform">
               <div className="user-except">
@@ -38,7 +35,7 @@ export default function Page() {
               <div className="user-author">
                 <img
                   loading="lazy"
-                  src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                  src="/images/people/testimonial-jason.webp"
                   alt="Jason Miller"
                   className="user-photo"
                 />

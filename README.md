@@ -40,8 +40,23 @@ src/
     blog.ts                    blog posts and blog categories
   styles/                      Webflow CSS, fonts, Lenis CSS and local overrides
 public/
-  assets/                      images, fonts, video
-  webflow/                     original Webflow, GSAP, ScrollTrigger and Lenis scripts
+  images/
+    brand/       logos (logo-dark.svg / logo-light.svg) and favicons
+    hero/        home page slideshow backgrounds (one per collection)
+    home/        other home page images
+    categories/  category cards (running, training, football, ...)
+    products/    product photos, named after the product slug
+    blog/        <topic>-featured.webp (post header) and <topic>-thumbnail.webp (cards)
+    about/       about page banner, mission image, video poster
+    team/        team member photos
+    people/      review avatars and testimonial photos
+    pages/       blog banner, contact, log in / sign up / reset password, 404
+    social/      link-preview images for sharing
+    partners/    placeholder partner logos (replace with real ones)
+    icons/       small UI icons
+  fonts/         Oswald, Lato and Inter Display font files
+  videos/        about page story video
+  vendor/        Webflow runtime, jQuery, GSAP, ScrollTrigger and Lenis scripts
 ```
 
 ## Editing content
@@ -52,7 +67,7 @@ public/
   whose `category` matches.
 - **Blog posts:** edit `src/data/blog.ts`. `content` is the post body as HTML.
 - **Page copy:** each page lives in `src/app/<route>/page.tsx` as regular JSX.
-- **Images:** put files in `public/assets/` and reference them as `/assets/<file>`.
+- **Images:** put files in the matching folder under `public/images/` and reference them as `/images/<folder>/<file>`. Product images are `/images/products/<product-slug>.webp`.
 
 ## How the Webflow parts work
 

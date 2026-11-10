@@ -3,14 +3,15 @@ import SiteShell from "@/components/SiteShell";
 import BenefitsSection from "@/components/BenefitsSection";
 import ProductCard from "@/components/ProductCard";
 import BlogCard from "@/components/BlogCard";
-import { getProducts } from "@/data/products";
-import { getPosts } from "@/data/blog";
+import { getFeaturedProducts } from "@/data/products";
+import { getLatestPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Velocity Wear - Performance Sportswear",
   description:
     "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Velocity Wear - Performance Sportswear",
     description:
       "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
@@ -33,17 +34,17 @@ export default function Page() {
                 <div className="home-info display-show-for-mobile">
                   <div className="review-img">
                     <img
-                      src="/assets/116c973861-6aa385c04c4242dee31e208f_Review-Image-01.webp"
+                      src="/images/people/review-1.webp"
                       alt=""
                       className="review-image item-one"
                     />
                     <img
-                      src="/assets/f36358d708-6aa385c3632b1efbd0f42516_Review-Image-02.webp"
+                      src="/images/people/review-2.webp"
                       alt=""
                       className="review-image item-two"
                     />
                     <img
-                      src="/assets/817be2fcfd-6aa385c6197cf42097204306_Review-Image-03.webp"
+                      src="/images/people/review-3.webp"
                       alt=""
                       className="review-image item-three"
                     />
@@ -86,27 +87,27 @@ export default function Page() {
                   <h1 className="home-heading item-one">
                     our trending
                     <br />
-                    Badminton Collections
+                    Running Collections
                   </h1>
                   <div className="home-heading item-two">
                     Our Trending
                     <br />
-                    Cricket Collections
+                    Training Collections
                   </div>
                   <div className="home-heading item-three">
                     Our Trending
                     <br />
-                    Hockey Collections
+                    Football Collections
                   </div>
                   <div className="home-heading item-four">
                     Our Trending
                     <br />
-                    Tenis Collections
+                    Tennis Collections
                   </div>
                   <div className="home-heading item-five">
                     Our Trending
                     <br />
-                    GYM Collections
+                    Outerwear Collections
                   </div>
                 </div>
                 <div className="home-tag">
@@ -115,30 +116,30 @@ export default function Page() {
                     data-wf-target={
                       '[[["6a9f93205a63e5051cc64757","a1904db8-5b25-8ca7-3967-4f9219595d42"],[]]]'
                     }
-                    href="/product-category/badminton"
+                    href="/product-category/running"
                     className="home-category item-one"
                   >
-                    Badminton
+                    Running
                   </a>
                   <a
                     aria-label="Text Link"
                     data-wf-target={
                       '[[["6a9f93205a63e5051cc64757","c8b10b84-ed66-4d51-bce6-587a0df37f38"],[]]]'
                     }
-                    href="/product-category/cricket"
+                    href="/product-category/training"
                     className="home-category item-two"
                   >
-                    Cricket
+                    Training
                   </a>
                   <a
                     aria-label="Text Link"
                     data-wf-target={
                       '[[["6a9f93205a63e5051cc64757","30911678-ec42-5ea3-6ee0-239caa978090"],[]]]'
                     }
-                    href="/product-category/hockey"
+                    href="/product-category/football"
                     className="home-category item-three"
                   >
-                    Hockey
+                    Football
                   </a>
                   <a
                     aria-label="Text Link"
@@ -155,10 +156,10 @@ export default function Page() {
                     data-wf-target={
                       '[[["6a9f93205a63e5051cc64757","2f2dad9a-eb0a-7516-3ad1-a0acaa52d04e"],[]]]'
                     }
-                    href="/product-category/gym"
+                    href="/product-category/outerwear"
                     className="home-category item-five"
                   >
-                    Gym
+                    Outerwear
                   </a>
                 </div>
               </div>
@@ -166,17 +167,17 @@ export default function Page() {
                 <div className="home-info display-show-for-desktop">
                   <div className="review-img">
                     <img
-                      src="/assets/116c973861-6aa385c04c4242dee31e208f_Review-Image-01.webp"
+                      src="/images/people/review-1.webp"
                       alt=""
                       className="review-image item-one"
                     />
                     <img
-                      src="/assets/f36358d708-6aa385c3632b1efbd0f42516_Review-Image-02.webp"
+                      src="/images/people/review-2.webp"
                       alt=""
                       className="review-image item-two"
                     />
                     <img
-                      src="/assets/817be2fcfd-6aa385c6197cf42097204306_Review-Image-03.webp"
+                      src="/images/people/review-3.webp"
                       alt=""
                       className="review-image item-three"
                     />
@@ -223,14 +224,14 @@ export default function Page() {
                     <div role="listitem" className="home-item w-dyn-item">
                       <a
                         aria-label="Link Block"
-                        href="/product/cricket-bat"
+                        href="/product/aero-running-tee"
                         className="home-card w-inline-block"
                       >
                         <div className="home-img">
                           <img
-                            alt="Cricket Bat"
+                            alt="Aero Running Tee"
                             data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D"
-                            src="/assets/ce44048b56-6abccb6c31ad87fd562854a8_Cricket-Bat.webp"
+                            src="/images/products/aero-running-tee.webp"
                             className="home-image"
                           />
                         </div>
@@ -253,10 +254,10 @@ export default function Page() {
                             </svg>
                           </div>
                           <div className="home-content">
-                            <div className="home-name">Cricket Bat</div>
+                            <div className="home-name">Aero Running Tee</div>
                             <div className="home-prices">
-                              <div>$139.99</div>
-                              <div className="home-price">$179.99</div>
+                              <div>$39.99</div>
+                              <div className="home-price">$49.99</div>
                             </div>
                           </div>
                         </div>
@@ -267,28 +268,28 @@ export default function Page() {
               </div>
               <div className="home-thumb">
                 <img
-                  src="/assets/a7f10591b5-6aab69f3049f7bbe33dc0a6c_Our-Trending-Badminton-Collections.webp"
-                  alt="Our Trending Badminton Collection"
+                  src="/images/hero/running.webp"
+                  alt="Our Trending Running Collection"
                   className="home-bg item-one"
                 />
                 <img
-                  src="/assets/ff1773b60d-6aab6a0c5283e4a43e6e413c_Our-Trending-Cricket-Collections.webp"
-                  alt="Our Trending Cricket Collection"
+                  src="/images/hero/training.webp"
+                  alt="Our Trending Training Collection"
                   className="home-bg item-two"
                 />
                 <img
-                  src="/assets/3498b59b8e-6aab6a1f3d2e4343bbc8e7cb_Our-Trending-Hockey-Collections.webp"
-                  alt="Our Trending Hockey Collection"
+                  src="/images/hero/football.webp"
+                  alt="Our Trending Football Collection"
                   className="home-bg item-three"
                 />
                 <img
-                  src="/assets/5e4b20713b-6aab6a4dd820bf1cbfae9148_Our-Trending-Tennis-Collections.webp"
+                  src="/images/hero/tennis.webp"
                   alt="Our Trending Tennis Collection"
                   className="home-bg item-four"
                 />
                 <img
-                  src="/assets/3fa7c0e088-6aab6a5f0a11e533590461e4_Our-Trending-GYM-Collections.webp"
-                  alt="Our Trending GYM Collection"
+                  src="/images/hero/outerwear.webp"
+                  alt="Our Trending Outerwear Collection"
                   className="home-bg item-five"
                 />
               </div>
@@ -306,25 +307,25 @@ export default function Page() {
                     </div>
                     <div className="about-title">
                       <div className="about-title-text">
-                        We deliver durable, high-performance sports gear and
+                        We make durable, high-performance sportswear and
                       </div>
                       <div className="about-title-info">
-                        <div className="about-title-text">outdoor equipment built</div>
+                        <div className="about-title-text">training kit built</div>
                         <div className="about-title-gap" />
                         <div className="about-title-text">for real-world results.</div>
                       </div>
                       <div className="about-title-text display-show-for-mobile">
-                        We deliver durable, high-performance sports gear and outdoor equipment built
-                        for real-world results.
+                        We make durable, high-performance sportswear built for real training and
+                        real results.
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="about-image-block">
                   <img
-                    src="/assets/d440532150-6aa7c95aaa1049e4bf004d12_About-Image.webp"
+                    src="/images/home/about-banner.webp"
                     loading="lazy"
-                    alt="We deliver durable, high-performance sports gear and outdoor equipment built for real-world results."
+                    alt="Athletes walking together on a running track wearing Velocity Wear"
                     className="about-image"
                   />
                 </div>
@@ -371,14 +372,7 @@ export default function Page() {
                 <div className="featured-card-block">
                   <div className="shop-wrapp w-dyn-list">
                     <div role="list" className="shop-list _3-columns w-dyn-items">
-                      {getProducts([
-                        "pro-football-boots",
-                        "cricket-bat",
-                        "football",
-                        "badminton-racket",
-                        "hockey-bat",
-                        "tennis-ball",
-                      ]).map((product) => (
+                      {getFeaturedProducts().map((product) => (
                         <ProductCard
                           key={product.slug}
                           product={product}
@@ -420,7 +414,7 @@ export default function Page() {
                                 <div className="category-num">01</div>
                                 <div className="category-line" />
                               </div>
-                              <div className="category-title">GYM Products</div>
+                              <div className="category-title">Running Collection</div>
                             </div>
                           </div>
                         </div>
@@ -430,14 +424,14 @@ export default function Page() {
                           <div role="listitem" className="category-item w-dyn-item">
                             <a
                               aria-label="Link Block"
-                              href="/product-category/gym"
+                              href="/product-category/running"
                               className="category-cont w-inline-block"
                             >
                               <div className="category-thumb">
                                 <img
-                                  src="/assets/3044496e5d-6aa3e1459aa303409242004c_GYM-Products.webp"
+                                  src="/images/categories/running.webp"
                                   loading="lazy"
-                                  alt="GYM"
+                                  alt="Running"
                                   className="category-image"
                                 />
                               </div>
@@ -447,9 +441,9 @@ export default function Page() {
                                   <div className="category-number">.</div>
                                 </div>
                                 <div className="category-excerpt">
-                                  Our collection includes Barbell Weight Sets, Kettlebell Sets,
-                                  Resistance Band Sets, and Workout Benches, everything you need for
-                                  a complete and effective home workout.
+                                  Lightweight running tees, shorts and shoes with breathable fabrics
+                                  and reflective details, built to keep you comfortable from the
+                                  first mile to the last.
                                 </div>
                               </div>
                             </a>
@@ -466,7 +460,7 @@ export default function Page() {
                                 <div className="category-num">02</div>
                                 <div className="category-line" />
                               </div>
-                              <div className="category-title">Football Products</div>
+                              <div className="category-title">Training Collection</div>
                             </div>
                           </div>
                         </div>
@@ -476,14 +470,14 @@ export default function Page() {
                           <div role="listitem" className="category-item w-dyn-item">
                             <a
                               aria-label="Link Block"
-                              href="/product-category/football"
+                              href="/product-category/training"
                               className="category-cont w-inline-block"
                             >
                               <div className="category-thumb">
                                 <img
-                                  src="/assets/5c9a805bac-6aa3e1263caede545a54214b_Football-Products.webp"
+                                  src="/images/categories/training.webp"
                                   loading="lazy"
-                                  alt="Football"
+                                  alt="Training"
                                   className="category-image"
                                 />
                               </div>
@@ -493,9 +487,9 @@ export default function Page() {
                                   <div className="category-number">.</div>
                                 </div>
                                 <div className="category-excerpt">
-                                  Our collection includes Footballs, Football Boots, Goalkeeper
-                                  Gloves, and Training Accessories, everything you need for a
-                                  complete and enjoyable football experience.
+                                  Supportive sports bras, squat-proof leggings and breathable tops
+                                  designed to move with you through every gym session and studio
+                                  class.
                                 </div>
                               </div>
                             </a>
@@ -512,7 +506,7 @@ export default function Page() {
                                 <div className="category-num">03</div>
                                 <div className="category-line" />
                               </div>
-                              <div className="category-title">Cricket Products</div>
+                              <div className="category-title">Football Collection</div>
                             </div>
                           </div>
                         </div>
@@ -522,14 +516,14 @@ export default function Page() {
                           <div role="listitem" className="category-item w-dyn-item">
                             <a
                               aria-label="Link Block"
-                              href="/product-category/cricket"
+                              href="/product-category/football"
                               className="category-cont w-inline-block"
                             >
                               <div className="category-thumb">
                                 <img
-                                  src="/assets/5ff3d9cd90-6aa3e13682e489893f4c4c46_Cricket-Products.webp"
+                                  src="/images/categories/football.webp"
                                   loading="lazy"
-                                  alt="Cricket"
+                                  alt="Football"
                                   className="category-image"
                                 />
                               </div>
@@ -539,9 +533,8 @@ export default function Page() {
                                   <div className="category-number">.</div>
                                 </div>
                                 <div className="category-excerpt">
-                                  Our collection includes Cricket Bats, Cricket Balls, Batting
-                                  Gloves, and Protective Gear, everything you need for a complete
-                                  and enjoyable cricket experience.
+                                  Fast, grippy football boots and lightweight match jerseys made for
+                                  speed, control and comfort on match day.
                                 </div>
                               </div>
                             </a>
@@ -558,7 +551,7 @@ export default function Page() {
                                 <div className="category-num">04</div>
                                 <div className="category-line" />
                               </div>
-                              <div className="category-title">Badminton Products</div>
+                              <div className="category-title">Tennis Collection</div>
                             </div>
                           </div>
                         </div>
@@ -568,14 +561,14 @@ export default function Page() {
                           <div role="listitem" className="category-item w-dyn-item">
                             <a
                               aria-label="Link Block"
-                              href="/product-category/badminton"
+                              href="/product-category/tennis"
                               className="category-cont w-inline-block"
                             >
                               <div className="category-thumb">
                                 <img
-                                  src="/assets/956169ca2a-6aa3e73410279207031af788_Badminton-Products.webp"
+                                  src="/images/categories/tennis.webp"
                                   loading="lazy"
-                                  alt="Badminton"
+                                  alt="Tennis"
                                   className="category-image"
                                 />
                               </div>
@@ -585,9 +578,8 @@ export default function Page() {
                                   <div className="category-number">.</div>
                                 </div>
                                 <div className="category-excerpt">
-                                  Our collection includes Badminton Rackets, Shuttlecocks, Badminton
-                                  Shoes, and Accessories, everything you need for a complete and
-                                  enjoyable badminton experience.
+                                  Cool, stretchy polos and pleated skirts with built-in shorts that
+                                  keep you sharp and free to move on court.
                                 </div>
                               </div>
                             </a>
@@ -604,7 +596,7 @@ export default function Page() {
                                 <div className="category-num">05</div>
                                 <div className="category-line" />
                               </div>
-                              <div className="category-title">Tennis Products</div>
+                              <div className="category-title">Outerwear Collection</div>
                             </div>
                           </div>
                         </div>
@@ -614,14 +606,14 @@ export default function Page() {
                           <div role="listitem" className="category-item w-dyn-item">
                             <a
                               aria-label="Link Block"
-                              href="/product-category/tennis"
+                              href="/product-category/outerwear"
                               className="category-cont w-inline-block"
                             >
                               <div className="category-thumb">
                                 <img
-                                  src="/assets/bbd68f51fe-6aa3e4a240d64a666a345b75_Tennis-Products.webp"
+                                  src="/images/categories/outerwear.webp"
                                   loading="lazy"
-                                  alt="Tennis"
+                                  alt="Outerwear"
                                   className="category-image"
                                 />
                               </div>
@@ -631,9 +623,8 @@ export default function Page() {
                                   <div className="category-number">.</div>
                                 </div>
                                 <div className="category-excerpt">
-                                  Our collection includes Tennis Rackets, Tennis Balls, Tennis
-                                  Shoes, and Accessories, everything you need for a complete and
-                                  enjoyable tennis experience.
+                                  Waterproof running shells and warm thermal layers that keep you
+                                  training through wind, rain and cold mornings.
                                 </div>
                               </div>
                             </a>
@@ -668,7 +659,7 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                            src="/images/people/testimonial-jason.webp"
                             alt="Jason Miller"
                             className="client-image"
                           />
@@ -711,7 +702,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Football Equipments</div>
+                        <div className="client-role">Bought Football Boots</div>
                       </div>
                     </div>
                     <div animated-step="" className="client-card">
@@ -719,18 +710,18 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/bbe9082c98-6aa3c5d4db8cb6391924844a_f073fdf74fc3ed9f64a3c9513b894a14_Amelia-Harris.jpg"
-                            alt="Kane Wilsom"
+                            src="/images/people/testimonial-amelia.webp"
+                            alt="Amelia Harris"
                             className="client-image"
                           />
                           <div className="client-conte">
-                            <div className="client-author">Kane Wilsom</div>
+                            <div className="client-author">Amelia Harris</div>
                             <div className="client-design">Fitness Enthusiast</div>
                           </div>
                         </div>
                         <div className="client-text">
-                          “I ordered gym equipment and delivery was fast. Everything feels durable
-                          and premium quality.”
+                          “I ordered training leggings and a sports bra and delivery was fast. The
+                          fit and fabric feel really premium.”
                         </div>
                       </div>
                       <div className="client-inform">
@@ -762,7 +753,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Gym Equipment</div>
+                        <div className="client-role">Bought Training Leggings</div>
                       </div>
                     </div>
                     <div animated-step="" className="client-card">
@@ -770,18 +761,18 @@ export default function Page() {
                         <div className="client-wrap">
                           <img
                             loading="lazy"
-                            src="/assets/b8574d0810-6aa3c5d4db8cb63919248447_3eefb6c2dfe613d7d619d315cd7d7586_Sarah-Thompson.jpg"
+                            src="/images/people/testimonial-sarah.webp"
                             alt="Sarah Thompson"
                             className="client-image"
                           />
                           <div className="client-conte">
                             <div className="client-author">Sarah Thompson</div>
-                            <div className="client-design">Passionate Cricketer</div>
+                            <div className="client-design">Marathon Runner</div>
                           </div>
                         </div>
                         <div className="client-text">
-                          “The quality of the football boots is outstanding. Super comfortable and
-                          perfect grip on the field.”
+                          “My Pace running shoes feel light and springy even at the end of a long
+                          run. Easily the best pair I have trained in.”
                         </div>
                       </div>
                       <div className="client-inform">
@@ -813,7 +804,7 @@ export default function Page() {
                             fill="currentColor"
                           />
                         </svg>
-                        <div className="client-role">Brought Cricket Equipments</div>
+                        <div className="client-role">Bought Running Shoes</div>
                       </div>
                     </div>
                   </div>
@@ -840,7 +831,7 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/11e80a52d7-6aa3c5d4db8cb63919248444_d6d27716cb25ac5a687b43f6a86a91db_Jason-Miller.jpg"
+                                src="/images/people/testimonial-jason.webp"
                                 alt="Jason Miller"
                                 className="client-image"
                               />
@@ -883,7 +874,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Football Equipments</div>
+                            <div className="client-role">Bought Football Boots</div>
                           </div>
                         </div>
                       </div>
@@ -893,18 +884,18 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/bbe9082c98-6aa3c5d4db8cb6391924844a_f073fdf74fc3ed9f64a3c9513b894a14_Amelia-Harris.jpg"
-                                alt="Kane Wilsom"
+                                src="/images/people/testimonial-amelia.webp"
+                                alt="Amelia Harris"
                                 className="client-image"
                               />
                               <div className="client-conte">
-                                <div className="client-author">Kane Wilsom</div>
+                                <div className="client-author">Amelia Harris</div>
                                 <div className="client-design">Fitness Enthusiast</div>
                               </div>
                             </div>
                             <div className="client-text">
-                              “I ordered gym equipment and delivery was fast. Everything feels
-                              durable and premium quality.”
+                              “I ordered training leggings and a sports bra and delivery was fast.
+                              The fit and fabric feel really premium.”
                             </div>
                           </div>
                           <div className="client-inform">
@@ -936,7 +927,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Gym Equipment</div>
+                            <div className="client-role">Bought Training Leggings</div>
                           </div>
                         </div>
                       </div>
@@ -946,18 +937,18 @@ export default function Page() {
                             <div className="client-wrap">
                               <img
                                 loading="lazy"
-                                src="/assets/b8574d0810-6aa3c5d4db8cb63919248447_3eefb6c2dfe613d7d619d315cd7d7586_Sarah-Thompson.jpg"
+                                src="/images/people/testimonial-sarah.webp"
                                 alt="Sarah Thompson"
                                 className="client-image"
                               />
                               <div className="client-conte">
                                 <div className="client-author">Sarah Thompson</div>
-                                <div className="client-design">Passionate Cricketer</div>
+                                <div className="client-design">Marathon Runner</div>
                               </div>
                             </div>
                             <div className="client-text">
-                              “The quality of the football boots is outstanding. Super comfortable
-                              and perfect grip on the field.”
+                              “My Pace running shoes feel light and springy even at the end of a
+                              long run. Easily the best pair I have trained in.”
                             </div>
                           </div>
                           <div className="client-inform">
@@ -989,7 +980,7 @@ export default function Page() {
                                 fill="currentColor"
                               />
                             </svg>
-                            <div className="client-role">Brought Cricket Equipments</div>
+                            <div className="client-role">Bought Running Shoes</div>
                           </div>
                         </div>
                       </div>
@@ -1027,14 +1018,7 @@ export default function Page() {
                 <div className="latest-wrap-block">
                   <div className="blog-wrap w-dyn-list">
                     <div role="list" className="blog-list w-dyn-items">
-                      {getPosts([
-                        "how-to-choose-the-right-sports-equipment-for-beginners",
-                        "best-badminton-rackets-for-power-and-control-in-2026-guide",
-                        "complete-guide-to-choosing-the-perfect-cricket-bat-for-players",
-                        "how-to-improve-badminton-footwork-for-faster-movement-and-better-court-coverage",
-                        "best-home-gym-equipment-guide-for-strength-training-and-daily-fitness-workouts",
-                        "top-running-gear-essentials-for-comfort-speed-performance-and-injury-prevention-tips",
-                      ]).map((post) => (
+                      {getLatestPosts(6).map((post) => (
                         <BlogCard key={post.slug} post={post} animation="text-animation" />
                       ))}
                     </div>

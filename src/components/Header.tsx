@@ -23,13 +23,13 @@ export default function Header({ variant = "base" }: { variant?: HeaderVariant }
             <NavLink href="/" className="header-brand w-nav-brand">
               <img
                 loading="eager"
-                src="/assets/velocity-wear-logo-dark.svg"
+                src="/images/brand/logo-dark.svg"
                 alt="Velocity Wear"
                 className={`header-logo dark-logo${brand}`}
               />
               <img
                 alt="Velocity Wear"
-                src="/assets/velocity-wear-logo-light.svg"
+                src="/images/brand/logo-light.svg"
                 className={`header-logo brand-logo${brand}`}
               />
             </NavLink>

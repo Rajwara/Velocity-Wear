@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 import BlogCard from "@/components/BlogCard";
-import { getPosts } from "@/data/blog";
+import { getLatestPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog | Velocity Wear - Performance Sportswear",
   description:
-    "Explore the Velocity Wear blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
+    "Explore the Velocity Wear blog for sports news, tips, insights, and helpful advice on choosing, wearing and caring for sportswear.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Blog | Velocity Wear - Performance Sportswear",
     description:
-      "Explore the Velocity Wear blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
+      "Explore the Velocity Wear blog for sports news, tips, insights, and helpful advice on choosing, wearing and caring for sportswear.",
   },
 };
 
@@ -30,7 +31,7 @@ export default function Page() {
                 Explore Our Stories Blog &amp; Insights
               </h1>
               <img
-                src="/assets/d014689b45-6aa121b41f8272e7df9016d2_Explore-Our-Stories-Blog---Insights.webp"
+                src="/images/pages/blog-banner.webp"
                 alt={"Explore Our Stories Blog & Insights"}
                 className="blog-hero-image"
               />
@@ -43,14 +44,7 @@ export default function Page() {
               <div className="blog-block">
                 <div className="blog-wrap w-dyn-list">
                   <div role="list" className="blog-list w-dyn-items">
-                    {getPosts([
-                      "how-to-select-the-best-football-boots-for-different-playing-surfaces",
-                      "essential-swimming-gear-for-beginners-to-improve-technique-and-speed",
-                      "must-have-recovery-tools-to-prevent-injuries-and-reduce-muscle-soreness",
-                      "how-to-choose-the-right-sports-equipment-for-beginners",
-                      "best-badminton-rackets-for-power-and-control-in-2026-guide",
-                      "complete-guide-to-choosing-the-perfect-cricket-bat-for-players",
-                    ]).map((post) => (
+                    {getLatestPosts(6).map((post) => (
                       <BlogCard key={post.slug} post={post} animation="card-animation" />
                     ))}
                   </div>

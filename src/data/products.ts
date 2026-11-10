@@ -1,4 +1,4 @@
-// Product catalogue (extracted from the Webflow CMS export).
+// Product catalogue.
 export type Product = {
   slug: string;
   name: string;
@@ -27,324 +27,324 @@ export type Category = {
 
 export const products: Product[] = [
   {
-    slug: "pro-football-boots",
-    name: "Pro Football Boots",
+    slug: "strike-pro-football-boots",
+    name: "Strike Pro Football Boots",
     category: "football",
-    image: "/assets/2c7be63021-6abccb5ce5cd25ddb73622ec_Pro-Football-Boots.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    image: "/images/products/strike-pro-football-boots.webp",
+    price: "$149.99",
+    comparePrice: "$189.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.\n",
+      "Low-profile firm-ground boots with a grippy textured upper and a lightweight plate built for quick cuts and clean strikes.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Strike Pro pairs a soft synthetic upper with a stiff, lightweight soleplate and conical studs for fast acceleration on firm natural grass. A snug collar locks the foot in place, while the textured strike zone gives you extra control on the ball.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0f2188e5d116637e0726d",
     productId: "6aa0f21746c73ee092d2b7bd",
     featured: 1,
     seo: {
-      title: "Pro Football Boots | Velocity Wear - Performance Sportswear",
+      title: "Strike Pro Football Boots | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Pro Football Boots on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Strike Pro Football Boots from Velocity Wear. Low-profile firm-ground boots with a grippy textured upper and a lightweight plate built for quick cuts and clean strikes.",
     },
   },
   {
-    slug: "cricket-bat",
-    name: "Cricket Bat",
-    category: "cricket",
-    image: "/assets/ce44048b56-6abccb6c31ad87fd562854a8_Cricket-Bat.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "aero-running-tee",
+    name: "Aero Running Tee",
+    category: "running",
+    image: "/images/products/aero-running-tee.webp",
+    price: "$39.99",
+    comparePrice: "$49.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
+      "A featherlight running tee with breathable mesh zones and a reflective back-neck detail for early and late runs.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "Made from a quick-drying recycled polyester knit, the Aero Tee moves sweat away from your skin and dries fast. Perforated side panels add airflow where you need it most, flat seams prevent chafing, and a reflective lime detail keeps you visible in low light.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0ec77b17b5e7201441927",
     productId: "6aa0ec769e46435f50ea0046",
     featured: 2,
     seo: {
-      title: "Cricket Bat | Velocity Wear - Performance Sportswear",
+      title: "Aero Running Tee | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricket Bat on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Aero Running Tee from Velocity Wear. A featherlight running tee with breathable mesh zones and a reflective back-neck detail for early and late runs.",
     },
   },
   {
-    slug: "football",
-    name: "Football",
+    slug: "club-match-jersey",
+    name: "Club Match Jersey",
     category: "football",
-    image: "/assets/fa42493358-6ab4dc905074e0a2841417d7_Football.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    image: "/images/products/club-match-jersey.webp",
+    price: "$59.99",
+    comparePrice: "$74.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
+      "An engineered-knit match jersey that stays light when the game gets intense, finished with a lime collar trim.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Club Match Jersey uses an engineered knit that is more open where you heat up and denser where you need structure. It is cut for a free range of motion and finished with a clean V-neck and lime trim. Ready for your team's numbers and badges.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0ec2285dc4856e2e7830a",
     productId: "6aa0ec214829aeef3f7d5bef",
     featured: 3,
     seo: {
-      title: "Football | Velocity Wear - Performance Sportswear",
+      title: "Club Match Jersey | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Football on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Club Match Jersey from Velocity Wear. An engineered-knit match jersey that stays light when the game gets intense, finished with a lime collar trim.",
     },
   },
   {
-    slug: "badminton-racket",
-    name: "Badminton Racket",
-    category: "badminton",
-    image: "/assets/43ceb5e34c-6ab4dca24637718c937359c8_Badminton-Racket.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "pace-running-shoes",
+    name: "Pace Running Shoes",
+    category: "running",
+    image: "/images/products/pace-running-shoes.webp",
+    price: "$129.99",
+    comparePrice: "$159.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.\n",
+      "Everyday running shoes with a breathable knit upper and a soft, springy foam midsole for long, comfortable miles.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Pace combines a sock-like knit upper with a responsive foam midsole that cushions every landing and returns energy into each stride. A durable rubber outsole grips wet and dry roads, and the padded heel tab makes them easy to pull on.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0ebd2d83167e10f431aa0",
     productId: "6aa0ebd2209c3215d9d4435a",
     featured: 4,
     seo: {
-      title: "Badminton Racket | Velocity Wear - Performance Sportswear",
+      title: "Pace Running Shoes | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Racket on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Pace Running Shoes from Velocity Wear. Everyday running shoes with a breathable knit upper and a soft, springy foam midsole for long, comfortable miles.",
     },
   },
   {
-    slug: "hockey-bat",
-    name: "Hockey Bat",
-    category: "hockey",
-    image: "/assets/13936b2b96-6ab4dcb6f9f8f4c2774fd6d3_Hockey-Bat.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "thermal-quarter-zip",
+    name: "Thermal Quarter-Zip",
+    category: "outerwear",
+    image: "/images/products/thermal-quarter-zip.webp",
+    price: "$79.99",
+    comparePrice: "$99.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.\n",
+      "A warm brushed-fleece mid layer with a quarter zip for easy temperature control on cold runs and training days.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Thermal Quarter-Zip has a soft brushed interior that traps heat without bulk, and a smooth exterior that layers easily under a shell. Thumbholes keep the sleeves in place and the high collar zips up to block the wind.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0eb618e5d116637ddd237",
     productId: "6aa0eb606ebeb100bce6d49b",
     featured: 5,
     seo: {
-      title: "Hockey Bat | Velocity Wear - Performance Sportswear",
+      title: "Thermal Quarter-Zip | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Hockey Bat on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Thermal Quarter-Zip from Velocity Wear. A warm brushed-fleece mid layer with a quarter zip for easy temperature control on cold runs and training days.",
     },
   },
   {
-    slug: "tennis-ball",
-    name: "Tennis Ball",
+    slug: "court-polo-shirt",
+    name: "Court Polo Shirt",
     category: "tennis",
-    image: "/assets/e4a1e75118-6ab4dccb5a25b02a98bf7987_Tennis-Ball.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    image: "/images/products/court-polo-shirt.webp",
+    price: "$54.99",
+    comparePrice: "$69.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
+      "A fitted performance polo with a two-button placket and lime tipping, made to stay cool and sharp on court.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Court Polo is made from a smooth, stretchy piqué that wicks sweat and dries quickly through long rallies. A tailored athletic fit, soft collar and lime tipping keep you looking sharp from the first serve to match point.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0eb12697f282ae3bc148b",
     productId: "6aa0eb11d02666b337a24392",
     featured: 6,
     seo: {
-      title: "Tennis Ball | Velocity Wear - Performance Sportswear",
+      title: "Court Polo Shirt | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Tennis Ball on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Court Polo Shirt from Velocity Wear. A fitted performance polo with a two-button placket and lime tipping, made to stay cool and sharp on court.",
     },
   },
   {
-    slug: "cricket-ball",
-    name: "Cricket Ball",
-    category: "cricket",
-    image: "/assets/69f0218ecc-6ab50a7be59071c85204ea69_Cricket-Ball.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "seamless-sports-bra",
+    name: "Seamless Sports Bra",
+    category: "training",
+    image: "/images/products/seamless-sports-bra.webp",
+    price: "$44.99",
+    comparePrice: "$54.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.\n",
+      "A medium-support seamless sports bra with a racerback and a soft ribbed band for training and gym sessions.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "Knitted in one piece with no side seams, the Seamless Sports Bra feels smooth against the skin and moves with you. A supportive ribbed band, removable pads and a racerback make it ideal for strength training, studio classes and runs.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
-    skuId: "6aa0ea0547e1155178da0191",
-    productId: "6aa0ea04dc6b0c1412ca07f6",
-    seo: {
-      title: "Cricket Ball | Velocity Wear - Performance Sportswear",
-      description:
-        "Shop Cricket Ball on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
-    },
-  },
-  {
-    slug: "cricketers-helmet",
-    name: "Cricketers Helmet",
-    category: "cricket",
-    image: "/assets/f2dca84d34-6ab50a882b317c839e6b22e3_Cricketers-Helmet.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
-    excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
-    description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
-    returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
-    skuId: "6aa0e958d866d24dfe7079ec",
-    productId: "6aa0e958b17b5e72014333b0",
-    seo: {
-      title: "Cricketers Helmet | Velocity Wear - Performance Sportswear",
-      description:
-        "Shop Cricketers Helmet on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
-    },
-  },
-  {
-    slug: "badminton-shuttlecock",
-    name: "Badminton Shuttlecock",
-    category: "badminton",
-    image: "/assets/71443ea9b1-6ab50a9b290e025c23fbaa22_Badminton-Shuttlecock.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
-    excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
-    description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
-    returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0e8d3f412dea2851798c4",
     productId: "6aa0e8d388eb96ffc47db6d1",
     seo: {
-      title: "Badminton Shuttlecock | Velocity Wear - Performance Sportswear",
+      title: "Seamless Sports Bra | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Shuttlecock on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Seamless Sports Bra from Velocity Wear. A medium-support seamless sports bra with a racerback and a soft ribbed band for training and gym sessions.",
     },
   },
   {
-    slug: "badminton-equipment",
-    name: "Badminton Equipment",
-    category: "badminton",
-    image: "/assets/0b853986b9-6ab50aad348d20b1c8f72f71_Badminton-Equipment.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "flex-training-leggings",
+    name: "Flex Training Leggings",
+    category: "training",
+    image: "/images/products/flex-training-leggings.webp",
+    price: "$69.99",
+    comparePrice: "$84.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.\n",
+      "High-waisted, squat-proof training leggings with a sculpting matte fabric and a hidden waistband pocket.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Flex Leggings are made from a four-way-stretch fabric that supports without restricting. The high waistband stays in place through squats and lunges, a hidden pocket holds a key or card, and reflective lime tabs sit at the hem.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0e7467a1f8ce620c6cf60",
     productId: "6aa0e745b4bc958945a55cce",
     seo: {
-      title: "Badminton Equipment | Velocity Wear - Performance Sportswear",
+      title: "Flex Training Leggings | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Equipment on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Flex Training Leggings from Velocity Wear. High-waisted, squat-proof training leggings with a sculpting matte fabric and a hidden waistband pocket.",
     },
   },
   {
-    slug: "racket-carry-bag",
-    name: "Racket Carry Bag",
+    slug: "ace-pleated-tennis-skirt",
+    name: "Ace Pleated Tennis Skirt",
     category: "tennis",
-    image: "/assets/174f571705-6ab50abcd372bc4825db6242_Cricket-Carry-Bag.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    image: "/images/products/ace-pleated-tennis-skirt.webp",
+    price: "$49.99",
+    comparePrice: "$59.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
+      "A classic pleated tennis skirt with built-in shorts, a lime waistband stripe and a ball pocket.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Ace skirt swings freely with every movement while the built-in shorts give you full coverage and a secure ball pocket. The soft, wide waistband sits comfortably through every match and the fabric dries fast.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    skuId: "6aa0e958d866d24dfe7079ec",
+    productId: "6aa0e958b17b5e72014333b0",
+    seo: {
+      title: "Ace Pleated Tennis Skirt | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Ace Pleated Tennis Skirt from Velocity Wear. A classic pleated tennis skirt with built-in shorts, a lime waistband stripe and a ball pocket.",
+    },
+  },
+  {
+    slug: "storm-shell-jacket",
+    name: "Storm Shell Jacket",
+    category: "outerwear",
+    image: "/images/products/storm-shell-jacket.webp",
+    price: "$139.99",
+    comparePrice: "$169.99",
+    excerpt:
+      "A lightweight waterproof running shell with taped seams, an adjustable hood and reflective lime details.",
+    description:
+      "The Storm Shell keeps rain out and lets heat escape thanks to a breathable waterproof membrane and taped seams. It packs into its own pocket, has an adjustable hood that stays put when you run, and lime zip pullers that are easy to grab with cold hands.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
+    skuId: "6aa0ea0547e1155178da0191",
+    productId: "6aa0ea04dc6b0c1412ca07f6",
+    seo: {
+      title: "Storm Shell Jacket | Velocity Wear - Performance Sportswear",
+      description:
+        "Shop the Storm Shell Jacket from Velocity Wear. A lightweight waterproof running shell with taped seams, an adjustable hood and reflective lime details.",
+    },
+  },
+  {
+    slug: "training-duffel-bag",
+    name: "Training Duffel Bag",
+    category: "accessories",
+    image: "/images/products/training-duffel-bag.webp",
+    price: "$69.99",
+    comparePrice: "$89.99",
+    excerpt:
+      "A tough ripstop duffel with a separate shoe compartment, padded strap and plenty of room for your kit.",
+    description:
+      "The Training Duffel is made from water-resistant ripstop fabric with a ventilated shoe compartment to keep clean and used kit apart. Inside and outside pockets organise your essentials, and the padded shoulder strap makes it easy to carry.",
+    returnPolicy:
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0e6b0103a27afa189ea99",
     productId: "6aa0e6afaaac254951379e53",
     seo: {
-      title: "Racket Carry Bag | Velocity Wear - Performance Sportswear",
+      title: "Training Duffel Bag | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Racket Carry Bag on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Training Duffel Bag from Velocity Wear. A tough ripstop duffel with a separate shoe compartment, padded strap and plenty of room for your kit.",
     },
   },
   {
-    slug: "dumbbells",
-    name: "Dumbbells",
-    category: "gym",
-    image: "/assets/223a491079-6ab50a6be2a24151e883861e_Dumbbells.webp",
-    price: "$139.99",
-    comparePrice: "$179.99",
+    slug: "performance-cap",
+    name: "Performance Cap",
+    category: "accessories",
+    image: "/images/products/performance-cap.webp",
+    price: "$29.99",
+    comparePrice: "$34.99",
     excerpt:
-      "Made for active play, this gear combines easy handling, dependable grip, and responsive performance to keep you moving with confidence.",
+      "A lightweight running cap with laser-cut ventilation, a sweat-wicking band and a lime under-brim.",
     description:
-      "The Pro Smash is built for athletes who demand speed, power, and control in every game. Its lightweight construction enables quicker movement, while the balanced design precision.",
+      "The Performance Cap keeps the sun out of your eyes and the sweat off your face. Laser-cut panels let heat escape, a soft sweatband wicks moisture and the adjustable strap gives a secure fit on every run.",
     returnPolicy:
-      "Customers can return the Pro Smash if it arrives damaged, defective, or differs from the product description. Please review our return policy for eligibility, conditions, and return instructions.",
+      "Unworn items with tags attached can be returned within 30 days for a full refund or exchange. See our return policy for details.",
     skuId: "6aa0ea963436baa432d6193d",
     productId: "6aa0ea94b17b5e72014381a9",
     seo: {
-      title: "Dumbbells | Velocity Wear - Performance Sportswear",
+      title: "Performance Cap | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Dumbbells on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop the Performance Cap from Velocity Wear. A lightweight running cap with laser-cut ventilation, a sweat-wicking band and a lime under-brim.",
     },
   },
 ];
 
 export const categories: Category[] = [
   {
-    slug: "cricket",
-    name: "Cricket",
-    title: "Cricket Products",
+    slug: "running",
+    name: "Running",
+    title: "Running Collection",
     seo: {
-      title: "Cricket | Velocity Wear - Performance Sportswear",
+      title: "Running | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricket on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop running sportswear from Velocity Wear. Lightweight tees, shorts and running shoes built for every mile.",
     },
   },
   {
-    slug: "badminton",
-    name: "Badminton",
-    title: "Badminton Products",
+    slug: "training",
+    name: "Training",
+    title: "Training Collection",
     seo: {
-      title: "Badminton | Velocity Wear - Performance Sportswear",
+      title: "Training | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop training sportswear from Velocity Wear. Supportive sports bras, leggings and tops for the gym and studio.",
     },
   },
   {
     slug: "football",
     name: "Football",
-    title: "Football Products",
+    title: "Football Collection",
     seo: {
       title: "Football | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Football on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop football sportswear from Velocity Wear. Boots and match kit made for speed and control.",
     },
   },
   {
     slug: "tennis",
     name: "Tennis",
-    title: "Tennis Products",
+    title: "Tennis Collection",
     seo: {
       title: "Tennis | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Tennis on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop tennis sportswear from Velocity Wear. Polos and skirts that stay cool and move with you on court.",
     },
   },
   {
-    slug: "hockey",
-    name: "Hockey",
-    title: "Hockey Products",
+    slug: "outerwear",
+    name: "Outerwear",
+    title: "Outerwear Collection",
     seo: {
-      title: "Hockey | Velocity Wear - Performance Sportswear",
+      title: "Outerwear | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Hockey on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop outerwear sportswear from Velocity Wear. Waterproof shells and warm layers for training in any weather.",
     },
   },
   {
-    slug: "gym",
-    name: "GYM",
-    title: "GYM Products",
+    slug: "accessories",
+    name: "Accessories",
+    title: "Accessories Collection",
     seo: {
-      title: "GYM | Velocity Wear - Performance Sportswear",
+      title: "Accessories | Velocity Wear - Performance Sportswear",
       description:
-        "Shop GYM on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop accessories sportswear from Velocity Wear. Caps, bags and essentials to complete your kit.",
     },
   },
 ];

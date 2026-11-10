@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "External Link | Velocity Wear - Performance Sportswear",
     description:
       "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",

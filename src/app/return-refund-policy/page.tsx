@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
   openGraph: {
+    images: ["/images/social/default.webp"],
     title: "Return & Refund Policy | Velocity Wear - Performance Sportswear",
     description:
       "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",

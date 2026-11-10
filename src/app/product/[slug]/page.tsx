@@ -167,7 +167,7 @@ export default async function ProductPage({ params }: Props) {
                       </div>
                       <div className="product-review">
                         <img
-                          src="/assets/d4149f9512-6aa2912e458b52d80a800311_4-Star.svg"
+                          src="/images/icons/rating-4-star.svg"
                           alt="4 Star"
                           className="product-star"
                         />
