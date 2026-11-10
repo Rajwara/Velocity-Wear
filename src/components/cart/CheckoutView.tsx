@@ -14,6 +14,7 @@ import {
   type OrderResponse,
   type PaymentMethod,
   type ShippingOption,
+  LAST_ORDER_KEY,
 } from "@/lib/checkout";
 
 const EMPTY: CustomerDetails = {
@@ -39,8 +40,8 @@ export default function CheckoutView() {
   const [shippingId, setShippingId] = useState<ShippingOption["id"]>("standard");
   const [paymentId, setPaymentId] = useState<PaymentMethod["id"]>("cod");
   const [submitting, setSubmitting] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
   const [formError, setFormError] = useState("");
-  const [order, setOrder] = useState<OrderResponse | null>(null);
 
   const shipping = SHIPPING_OPTIONS.find((o) => o.id === shippingId) ?? SHIPPING_OPTIONS[0];
   const total = subtotal + shipping.price;
@@ -85,21 +86,28 @@ export default function CheckoutView() {
           focusFirstError(data.fields);
         }
         setFormError(data.error ?? "Something went wrong. Please try again.");
+        setSubmitting(false);
         return;
       }
-      setOrder(data as OrderResponse);
+      const placed = data as OrderResponse;
+      try {
+        window.sessionStorage.setItem(LAST_ORDER_KEY, JSON.stringify(placed));
+      } catch {
+        // the thank-you page still shows the order number from the URL
+      }
+      setRedirecting(true);
       clear();
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.location.assign(
+        `/thank-you?type=order&order=${encodeURIComponent(placed.orderNumber)}`,
+      );
+      return;
     } catch {
       setFormError("We couldn't reach the store. Check your connection and try again.");
-    } finally {
-      setSubmitting(false);
     }
+    setSubmitting(false);
   };
 
-  if (order) return <Confirmation order={order} />;
-
-  if (!loaded) return <div className="cartpage-loading" aria-busy="true" />;
+  if (!loaded || redirecting) return <div className="cartpage-loading" aria-busy="true" />;
 
   if (!items.length) {
     return (
@@ -323,55 +331,5 @@ export default function CheckoutView() {
         </a>
       </aside>
     </form>
-  );
-}
-
-function Confirmation({ order }: { order: OrderResponse }) {
-  return (
-    <div className="co-confirm">
-      <div className="co-confirm-badge" aria-hidden="true">
-        ✓
-      </div>
-      <h2 className="cartpage-empty-title">Thank you, {order.firstName}!</h2>
-      <p>
-        Your order <strong>{order.orderNumber}</strong> has been placed. We&apos;ll contact you at{" "}
-        <strong>{order.email}</strong> with delivery updates.
-      </p>
-      <div className="co-notice" role="note">
-        Payment: <strong>{order.payment}</strong>. Please have{" "}
-        <strong>{formatPrice(order.total)}</strong> ready in cash when your order arrives.
-      </div>
-      <div className="cartpage-summary co-confirm-summary">
-        <ul className="co-summary-items" role="list">
-          {order.items.map((item) => (
-            <li key={item.slug}>
-              <span className="co-summary-thumb">
-                <img src={item.image} alt="" />
-                <span className="co-summary-qty">{item.quantity}</span>
-              </span>
-              <span className="co-summary-name">{item.name}</span>
-              <span>{formatPrice(item.lineTotal)}</span>
-            </li>
-          ))}
-        </ul>
-        <dl className="cartpage-lines">
-          <div>
-            <dt>Subtotal</dt>
-            <dd>{formatPrice(order.subtotal)}</dd>
-          </div>
-          <div>
-            <dt>{order.shipping.label}</dt>
-            <dd>{order.shipping.price ? formatPrice(order.shipping.price) : "Free"}</dd>
-          </div>
-        </dl>
-        <div className="cartpage-grand">
-          <span>Total to pay on delivery</span>
-          <span>{formatPrice(order.total)}</span>
-        </div>
-      </div>
-      <a href="/shop" className="cart-primary">
-        Continue shopping
-      </a>
-    </div>
   );
 }

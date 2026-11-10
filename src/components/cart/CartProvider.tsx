@@ -122,7 +122,15 @@ export default function CartProvider({ children }: { children: ReactNode }) {
     setLines((prev) => prev.filter((l) => l.slug !== slug));
   }, []);
 
-  const clear = useCallback(() => setLines([]), []);
+  const clear = useCallback(() => {
+    setLines([]);
+    // Save immediately so the cart is empty even if the page navigates away right after.
+    try {
+      window.localStorage.setItem(STORAGE_KEY, "[]");
+    } catch {
+      // storage unavailable
+    }
+  }, []);
   const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);
 

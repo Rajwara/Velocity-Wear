@@ -108,3 +108,6 @@ export type OrderResponse = {
   email: string;
   firstName: string;
 };
+
+/** sessionStorage key used to hand the placed order to the thank-you page. */
+export const LAST_ORDER_KEY = "velocity-wear-last-order";

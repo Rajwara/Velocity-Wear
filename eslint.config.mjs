@@ -11,6 +11,8 @@ const config = [
       // Internal links are plain <a> so every navigation is a full page load,
       // which lets the Webflow interaction runtime initialise cleanly.
       "@next/next/no-html-link-for-pages": "off",
+      // Same reason: redirects after forms (e.g. to /thank-you) use full page loads.
+      "@next/next/no-location-assign-relative-destination": "off",
     },
   },
   { ignores: [".next/**", "node_modules/**", "public/**", "next-env.d.ts"] },

@@ -2,11 +2,12 @@
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { lockScroll } from "@/lib/scroll";
+import { hideWelcomeOffer, SUBSCRIBED_HIDE_DAYS } from "@/lib/welcome-offer";
 
 /** Newsletter sign-up popup, opened from the floating envelope button. */
 export default function NewsletterModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -43,7 +44,8 @@ export default function NewsletterModal({ open, onClose }: { open: boolean; onCl
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error ?? "Something went wrong. Please try again.");
-      setStatus("done");
+      hideWelcomeOffer(SUBSCRIBED_HIDE_DAYS);
+      window.location.assign("/thank-you?type=newsletter");
     } catch (err) {
       setStatus("error");
       setMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
@@ -74,70 +76,52 @@ export default function NewsletterModal({ open, onClose }: { open: boolean; onCl
             <span aria-hidden="true">×</span>
             <span className="filter-sr">Close</span>
           </button>
-          {status === "done" ? (
-            <div className="nl-done">
-              <div className="nl-done-badge" aria-hidden="true">
-                ✓
-              </div>
-              <h2 id="nl-title" className="nl-title">
-                You&apos;re in!
-              </h2>
-              <p className="nl-text">
-                Thanks for joining. Watch your inbox for new drops, training tips and member-only
-                offers.
-              </p>
-              <button type="button" className="cart-primary nl-submit" onClick={onClose}>
-                Keep shopping
+          <>
+            <div className="nl-eyebrow">Welcome offer</div>
+            <h2 id="nl-title" className="nl-title">
+              Join the Velocity Club
+            </h2>
+            <p className="nl-text">
+              Sign up to get your welcome offer by email, plus first access to new collections,
+              training tips and member-only deals.
+            </p>
+            <form className="nl-form" onSubmit={onSubmit} noValidate data-cart-form="">
+              <label htmlFor="nl-email" className="filter-sr">
+                Email address
+              </label>
+              <input
+                ref={inputRef}
+                id="nl-email"
+                type="email"
+                autoComplete="email"
+                placeholder="Enter your email"
+                value={email}
+                maxLength={200}
+                aria-invalid={status === "error"}
+                aria-describedby={status === "error" ? "nl-error" : undefined}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (status === "error") setStatus("idle");
+                }}
+              />
+              <button
+                type="submit"
+                className="cart-primary nl-submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "Subscribing…" : "Subscribe"}
               </button>
-            </div>
-          ) : (
-            <>
-              <div className="nl-eyebrow">Welcome offer</div>
-              <h2 id="nl-title" className="nl-title">
-                Join the Velocity Club
-              </h2>
-              <p className="nl-text">
-                Sign up to get your welcome offer by email, plus first access to new collections,
-                training tips and member-only deals.
-              </p>
-              <form className="nl-form" onSubmit={onSubmit} noValidate data-cart-form="">
-                <label htmlFor="nl-email" className="filter-sr">
-                  Email address
-                </label>
-                <input
-                  ref={inputRef}
-                  id="nl-email"
-                  type="email"
-                  autoComplete="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  maxLength={200}
-                  aria-invalid={status === "error"}
-                  aria-describedby={status === "error" ? "nl-error" : undefined}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    if (status === "error") setStatus("idle");
-                  }}
-                />
-                <button
-                  type="submit"
-                  className="cart-primary nl-submit"
-                  disabled={status === "sending"}
-                >
-                  {status === "sending" ? "Subscribing…" : "Subscribe"}
-                </button>
-              </form>
-              {status === "error" ? (
-                <div id="nl-error" className="nl-error" role="alert">
-                  {message}
-                </div>
-              ) : null}
-              <p className="nl-legal">
-                By subscribing you agree to our <a href="/privacy-policy">Privacy Policy</a>. You
-                can unsubscribe at any time.
-              </p>
-            </>
-          )}
+            </form>
+            {status === "error" ? (
+              <div id="nl-error" className="nl-error" role="alert">
+                {message}
+              </div>
+            ) : null}
+            <p className="nl-legal">
+              By subscribing you agree to our <a href="/privacy-policy">Privacy Policy</a>. You can
+              unsubscribe at any time.
+            </p>
+          </>
         </div>
       </div>
     </div>

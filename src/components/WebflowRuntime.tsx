@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { BUNDLES, type Bundle } from "@/components/webflow-config";
+import { hideWelcomeOffer, SUBSCRIBED_HIDE_DAYS } from "@/lib/welcome-offer";
 
 export type LenisInstance = {
   on(event: string, cb: () => void): void;
@@ -59,30 +60,40 @@ function showMessage(text: string) {
 }
 
 /**
- * Stand-ins for the parts that need a backend (forms and checkout; the cart itself lives in src/components/cart).
- * Replace these with real handlers when you connect a commerce / email service.
+ * Sends one of the site's Webflow-built forms to an API route, then goes to the
+ * thank-you page. On failure Webflow's own error block is shown.
  */
-/** Footer newsletter form: send to /api/newsletter and show Webflow's success / error block. */
-async function submitNewsletter(form: HTMLFormElement) {
+async function submitForm(
+  form: HTMLFormElement,
+  endpoint: string,
+  payload: Record<string, unknown>,
+  thankYouType: string,
+) {
   const wrapper = form.closest(".w-form");
-  const done = wrapper?.querySelector<HTMLElement>(".w-form-done");
   const fail = wrapper?.querySelector<HTMLElement>(".w-form-fail");
-  const email = new FormData(form).get("email");
+  const submit = form.querySelector<HTMLInputElement | HTMLButtonElement>("[type=submit]");
+  if (fail) fail.style.display = "none";
+  if (submit) submit.disabled = true;
   try {
-    const res = await fetch("/api/newsletter", {
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, source: "footer" }),
+      body: JSON.stringify(payload),
     });
     if (!res.ok) throw new Error();
-    form.style.display = "none";
-    if (fail) fail.style.display = "none";
-    if (done) done.style.display = "block";
+    if (thankYouType === "newsletter") hideWelcomeOffer(SUBSCRIBED_HIDE_DAYS);
+    window.location.assign(`/thank-you?type=${thankYouType}`);
   } catch {
     if (fail) fail.style.display = "block";
+    if (submit) submit.disabled = false;
   }
 }
 
+/**
+ * Handles the forms that came from the Webflow export. Newsletter and contact forms are
+ * sent to /api/newsletter and /api/contact; the account forms (log in, sign up, reset
+ * password, protected page) still need an account service, so they show a notice.
+ */
 function installDemoAdapters() {
   document.addEventListener(
     "submit",
@@ -92,11 +103,38 @@ function installDemoAdapters() {
       if (form.closest("[data-cart-form]")) return;
       e.preventDefault();
       e.stopImmediatePropagation();
-      if (form.matches('[data-name="Newsletter"]')) {
-        void submitNewsletter(form as HTMLFormElement);
+      const f = form as HTMLFormElement;
+      if (!f.checkValidity()) {
+        f.reportValidity();
         return;
       }
-      showMessage("Demo form: connect your email or account service to enable submissions.");
+      const data = new FormData(f);
+      const get = (name: string) => String(data.get(name) ?? "");
+      if (f.matches('[data-name="Newsletter"]')) {
+        void submitForm(
+          f,
+          "/api/newsletter",
+          { email: get("email"), source: "footer" },
+          "newsletter",
+        );
+        return;
+      }
+      if (f.matches('[data-name="Contact Us"]')) {
+        void submitForm(
+          f,
+          "/api/contact",
+          {
+            firstName: get("First-Name"),
+            lastName: get("Last-Name"),
+            email: get("Email"),
+            subject: get("Subject"),
+            message: get("Message"),
+          },
+          "contact",
+        );
+        return;
+      }
+      showMessage("Accounts aren't set up yet: connect an account service to enable this form.");
     },
     true,
   );

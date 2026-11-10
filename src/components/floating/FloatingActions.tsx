@@ -5,27 +5,7 @@ import ChatPanel from "@/components/floating/ChatPanel";
 import NewsletterModal from "@/components/floating/NewsletterModal";
 import { scrollToTop } from "@/lib/scroll";
 import { WELCOME_OFFER } from "@/lib/site";
-
-const OFFER_KEY = "velocity-wear-offer-dismissed";
-const offerListeners = new Set<() => void>();
-
-function offerDismissed() {
-  try {
-    const until = Number(window.localStorage.getItem(OFFER_KEY));
-    return Number.isFinite(until) && until > Date.now();
-  } catch {
-    return false;
-  }
-}
-
-function subscribeOffer(cb: () => void) {
-  offerListeners.add(cb);
-  window.addEventListener("storage", cb);
-  return () => {
-    offerListeners.delete(cb);
-    window.removeEventListener("storage", cb);
-  };
-}
+import { hideWelcomeOffer, offerDismissed, subscribeOffer } from "@/lib/welcome-offer";
 
 /** Floating buttons: chat and the welcome-offer (newsletter) pill bottom-left, back to top bottom-right. */
 export default function FloatingActions() {
@@ -42,15 +22,7 @@ export default function FloatingActions() {
 
   // Hidden on the server and until the browser says it hasn't been dismissed.
   const offerVisible = !useSyncExternalStore(subscribeOffer, offerDismissed, () => true);
-  const dismissOffer = () => {
-    try {
-      const until = Date.now() + WELCOME_OFFER.hideForDays * 24 * 60 * 60 * 1000;
-      window.localStorage.setItem(OFFER_KEY, String(until));
-    } catch {
-      // storage unavailable: hide for this page view only
-    }
-    offerListeners.forEach((cb) => cb());
-  };
+  const dismissOffer = () => hideWelcomeOffer(WELCOME_OFFER.hideForDays);
 
   const closeNewsletter = useCallback(() => setNewsletterOpen(false), []);
   const closeChat = useCallback(() => setChatOpen(false), []);
