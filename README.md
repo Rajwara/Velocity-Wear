@@ -114,7 +114,7 @@ behind them:
 
 ### Floating buttons, newsletter and chat
 
-Every page has floating buttons in the bottom-right corner (`src/components/floating/`):
+Every page has floating buttons (`src/components/floating/`): chat and newsletter bottom-left, back to top bottom-right:
 
 - **Chat:** instant answers to common questions (shipping, cash on delivery, returns,
   sizing, order tracking) plus "Email us" and "Chat on WhatsApp" buttons. Set your

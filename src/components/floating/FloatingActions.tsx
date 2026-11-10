@@ -5,7 +5,7 @@ import ChatPanel from "@/components/floating/ChatPanel";
 import NewsletterModal from "@/components/floating/NewsletterModal";
 import { scrollToTop } from "@/lib/scroll";
 
-/** Floating buttons in the bottom-right corner: back to top, newsletter and chat. */
+/** Floating buttons: chat and newsletter bottom-left, back to top bottom-right. */
 export default function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
   const [newsletterOpen, setNewsletterOpen] = useState(false);
@@ -23,27 +23,7 @@ export default function FloatingActions() {
 
   return (
     <>
-      <div className="fab-stack">
-        <button
-          type="button"
-          className={`fab fab-top${showTop ? " is-visible" : ""}`}
-          onClick={scrollToTop}
-          aria-label="Back to top"
-          tabIndex={showTop ? 0 : -1}
-        >
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path
-              d="M12 19V5M5 12l7-7 7 7"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="fab-tip">Back to top</span>
-        </button>
-
+      <div className="fab-stack fab-stack-left">
         <button
           type="button"
           className="fab fab-newsletter"
@@ -110,6 +90,27 @@ export default function FloatingActions() {
             </svg>
           )}
           <span className="fab-tip">{chatOpen ? "Close chat" : "Chat with us"}</span>
+        </button>
+      </div>
+      <div className="fab-stack fab-stack-right">
+        <button
+          type="button"
+          className={`fab fab-top${showTop ? " is-visible" : ""}`}
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          tabIndex={showTop ? 0 : -1}
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path
+              d="M12 19V5M5 12l7-7 7 7"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span className="fab-tip">Back to top</span>
         </button>
       </div>
 

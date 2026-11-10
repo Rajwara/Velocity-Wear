@@ -1,13 +1,18 @@
 /* Floating buttons, newsletter popup and chat panel (src/components/floating) */
 .fab-stack {
   position: fixed;
-  right: 24px;
   bottom: 24px;
   z-index: 1500;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+}
+.fab-stack-left {
+  left: 24px;
+}
+.fab-stack-right {
+  right: 24px;
 }
 .fab {
   position: relative;
@@ -36,9 +41,21 @@
   outline: 3px solid #e1ec2b;
   outline-offset: 3px;
 }
-.fab-chat {
+.fab-chat,
+.fab-newsletter {
   width: 62px;
   height: 62px;
+}
+.fab-chat {
+  background: #e1ec2b;
+  color: #0e0e0e;
+}
+.fab-newsletter {
+  border: 2px solid #e1ec2b;
+  background: #0e0e0e;
+  color: #e1ec2b;
+}
+.fab-newsletter:hover {
   background: #e1ec2b;
   color: #0e0e0e;
 }
@@ -102,6 +119,15 @@
 .fab:hover .fab-tip,
 .fab:focus-visible .fab-tip {
   opacity: 1;
+  transform: translate(0, -50%);
+}
+.fab-stack-left .fab-tip {
+  right: auto;
+  left: calc(100% + 12px);
+  transform: translate(-6px, -50%);
+}
+.fab-stack-left .fab:hover .fab-tip,
+.fab-stack-left .fab:focus-visible .fab-tip {
   transform: translate(0, -50%);
 }
 
@@ -282,13 +308,13 @@
 /* ---------------- Chat panel ---------------- */
 .chat-panel {
   position: fixed;
-  right: 24px;
-  bottom: 100px;
+  left: 24px;
+  bottom: 170px;
   z-index: 1600;
   display: flex;
   flex-direction: column;
   width: min(380px, calc(100vw - 32px));
-  height: min(560px, calc(100vh - 140px));
+  height: min(560px, calc(100vh - 200px));
   overflow: hidden;
   border-radius: 18px;
   background: #fff;
@@ -296,7 +322,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(16px) scale(0.98);
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   transition:
     opacity 0.25s ease,
     transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -505,17 +531,23 @@
 /* ---------------- Small screens ---------------- */
 @media screen and (max-width: 767px) {
   .fab-stack {
-    right: 14px;
     bottom: 14px;
     gap: 10px;
+  }
+  .fab-stack-left {
+    left: 14px;
+  }
+  .fab-stack-right {
+    right: 14px;
   }
   .fab {
     width: 48px;
     height: 48px;
   }
-  .fab-chat {
-    width: 56px;
-    height: 56px;
+  .fab-chat,
+  .fab-newsletter {
+    width: 52px;
+    height: 52px;
   }
   .fab-top {
     width: 42px;
@@ -527,9 +559,9 @@
   .chat-panel {
     right: 8px;
     left: 8px;
-    bottom: 82px;
+    bottom: 140px;
     width: auto;
-    height: min(560px, calc(100vh - 100px));
+    height: min(540px, calc(100vh - 160px));
   }
   .nl-modal {
     grid-template-columns: 1fr;
