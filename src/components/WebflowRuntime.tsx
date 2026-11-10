@@ -23,7 +23,11 @@ declare global {
  * initialises on DOMContentLoaded. Here the page has already loaded, so Webflow
  * starts as soon as its script runs: load the animation libraries first.
  */
-const ANIMATION_LIBS = ["/webflow/lenis.min.js", "/webflow/gsap.min.js", "/webflow/ScrollTrigger.min.js"];
+const ANIMATION_LIBS = [
+  "/webflow/lenis.min.js",
+  "/webflow/gsap.min.js",
+  "/webflow/ScrollTrigger.min.js",
+];
 
 function loadScript(src: string) {
   return new Promise<void>((resolve, reject) => {

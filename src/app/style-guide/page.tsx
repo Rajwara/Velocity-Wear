@@ -3,13 +3,13 @@ import SiteShell from "@/components/SiteShell";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Style Guide | Athlor - Webflow Ecommerce Website Template",
+  title: "Style Guide | Velocity Wear - Performance Sportswear",
   description:
-    "Explore Athlor’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",
+    "Explore Velocity Wear’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",
   openGraph: {
-    title: "Style Guide | Athlor - Webflow Ecommerce Website Template",
+    title: "Style Guide | Velocity Wear - Performance Sportswear",
     description:
-      "Explore Athlor’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",
+      "Explore Velocity Wear’s style guide for typography, colors, buttons, forms, layouts, and reusable design elements to build a consistent sports website.",
   },
 };
 

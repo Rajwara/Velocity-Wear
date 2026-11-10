@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Contact | Athlor - Webflow Ecommerce Website Template",
+  title: "Contact | Velocity Wear - Performance Sportswear",
   description:
-    "Contact Athlor for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
+    "Contact Velocity Wear for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
   openGraph: {
-    title: "Contact | Athlor - Webflow Ecommerce Website Template",
+    title: "Contact | Velocity Wear - Performance Sportswear",
     description:
-      "Contact Athlor for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
+      "Contact Velocity Wear for information about sports products, sportswear, equipment, orders, and online store support for your sports business.",
   },
 };
 

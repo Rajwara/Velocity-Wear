@@ -43,9 +43,9 @@ export const products: Product[] = [
     productId: "6aa0f21746c73ee092d2b7bd",
     featured: 1,
     seo: {
-      title: "Pro Football Boots | Athlor - Webflow Ecommerce Website Template",
+      title: "Pro Football Boots | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Pro Football Boots on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Pro Football Boots on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -65,9 +65,9 @@ export const products: Product[] = [
     productId: "6aa0ec769e46435f50ea0046",
     featured: 2,
     seo: {
-      title: "Cricket Bat | Athlor - Webflow Ecommerce Website Template",
+      title: "Cricket Bat | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricket Bat on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Cricket Bat on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -87,9 +87,9 @@ export const products: Product[] = [
     productId: "6aa0ec214829aeef3f7d5bef",
     featured: 3,
     seo: {
-      title: "Football | Athlor - Webflow Ecommerce Website Template",
+      title: "Football | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Football on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Football on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -109,9 +109,9 @@ export const products: Product[] = [
     productId: "6aa0ebd2209c3215d9d4435a",
     featured: 4,
     seo: {
-      title: "Badminton Racket | Athlor - Webflow Ecommerce Website Template",
+      title: "Badminton Racket | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Racket on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Badminton Racket on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -131,9 +131,9 @@ export const products: Product[] = [
     productId: "6aa0eb606ebeb100bce6d49b",
     featured: 5,
     seo: {
-      title: "Hockey Bat | Athlor - Webflow Ecommerce Website Template",
+      title: "Hockey Bat | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Hockey Bat on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Hockey Bat on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -153,9 +153,9 @@ export const products: Product[] = [
     productId: "6aa0eb11d02666b337a24392",
     featured: 6,
     seo: {
-      title: "Tennis Ball | Athlor - Webflow Ecommerce Website Template",
+      title: "Tennis Ball | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Tennis Ball on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Tennis Ball on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -174,9 +174,9 @@ export const products: Product[] = [
     skuId: "6aa0ea0547e1155178da0191",
     productId: "6aa0ea04dc6b0c1412ca07f6",
     seo: {
-      title: "Cricket Ball | Athlor - Webflow Ecommerce Website Template",
+      title: "Cricket Ball | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricket Ball on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Cricket Ball on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -195,9 +195,9 @@ export const products: Product[] = [
     skuId: "6aa0e958d866d24dfe7079ec",
     productId: "6aa0e958b17b5e72014333b0",
     seo: {
-      title: "Cricketers Helmet | Athlor - Webflow Ecommerce Website Template",
+      title: "Cricketers Helmet | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricketers Helmet on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Cricketers Helmet on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -216,9 +216,9 @@ export const products: Product[] = [
     skuId: "6aa0e8d3f412dea2851798c4",
     productId: "6aa0e8d388eb96ffc47db6d1",
     seo: {
-      title: "Badminton Shuttlecock | Athlor - Webflow Ecommerce Website Template",
+      title: "Badminton Shuttlecock | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Shuttlecock on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Badminton Shuttlecock on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -237,9 +237,9 @@ export const products: Product[] = [
     skuId: "6aa0e7467a1f8ce620c6cf60",
     productId: "6aa0e745b4bc958945a55cce",
     seo: {
-      title: "Badminton Equipment | Athlor - Webflow Ecommerce Website Template",
+      title: "Badminton Equipment | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton Equipment on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Badminton Equipment on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -258,9 +258,9 @@ export const products: Product[] = [
     skuId: "6aa0e6b0103a27afa189ea99",
     productId: "6aa0e6afaaac254951379e53",
     seo: {
-      title: "Racket Carry Bag | Athlor - Webflow Ecommerce Website Template",
+      title: "Racket Carry Bag | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Racket Carry Bag on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Racket Carry Bag on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
   {
@@ -279,9 +279,9 @@ export const products: Product[] = [
     skuId: "6aa0ea963436baa432d6193d",
     productId: "6aa0ea94b17b5e72014381a9",
     seo: {
-      title: "Dumbbells | Athlor - Webflow Ecommerce Website Template",
+      title: "Dumbbells | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Dumbbells on Athlor, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
+        "Shop Dumbbells on Velocity Wear, with detailed product information, features, and specifications for sportswear, equipment, and game products online.",
     },
   },
 ];
@@ -292,9 +292,9 @@ export const categories: Category[] = [
     name: "Cricket",
     title: "Cricket Products",
     seo: {
-      title: "Cricket | Athlor - Webflow Ecommerce Website Template",
+      title: "Cricket | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Cricket on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop Cricket on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
   {
@@ -302,9 +302,9 @@ export const categories: Category[] = [
     name: "Badminton",
     title: "Badminton Products",
     seo: {
-      title: "Badminton | Athlor - Webflow Ecommerce Website Template",
+      title: "Badminton | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Badminton on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop Badminton on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
   {
@@ -312,9 +312,9 @@ export const categories: Category[] = [
     name: "Football",
     title: "Football Products",
     seo: {
-      title: "Football | Athlor - Webflow Ecommerce Website Template",
+      title: "Football | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Football on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop Football on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
   {
@@ -322,9 +322,9 @@ export const categories: Category[] = [
     name: "Tennis",
     title: "Tennis Products",
     seo: {
-      title: "Tennis | Athlor - Webflow Ecommerce Website Template",
+      title: "Tennis | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Tennis on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop Tennis on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
   {
@@ -332,9 +332,9 @@ export const categories: Category[] = [
     name: "Hockey",
     title: "Hockey Products",
     seo: {
-      title: "Hockey | Athlor - Webflow Ecommerce Website Template",
+      title: "Hockey | Velocity Wear - Performance Sportswear",
       description:
-        "Shop Hockey on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop Hockey on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
   {
@@ -342,9 +342,9 @@ export const categories: Category[] = [
     name: "GYM",
     title: "GYM Products",
     seo: {
-      title: "GYM | Athlor - Webflow Ecommerce Website Template",
+      title: "GYM | Velocity Wear - Performance Sportswear",
       description:
-        "Shop GYM on Athlor, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
+        "Shop GYM on Velocity Wear, featuring quality sportswear, equipment, and products for athletes, teams, and sports enthusiasts across popular games.",
     },
   },
 ];

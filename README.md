@@ -1,6 +1,6 @@
 # Velocity Wear
 
-A Next.js (App Router, TypeScript) version of the Athlor Webflow sports store export.
+Performance sportswear store built with Next.js (App Router, TypeScript), converted from the Athlor Webflow template.
 
 ## Getting started
 

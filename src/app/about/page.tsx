@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "About | Athlor - Webflow Ecommerce Website Template",
+  title: "About | Velocity Wear - Performance Sportswear",
   description:
-    "Learn about Athlor, a modern sports store template built for sports retailers and brands selling sportswear, equipment, and products online.",
+    "Learn about Velocity Wear, a performance sportswear brand built for athletes who train hard and move fast.",
   openGraph: {
-    title: "About | Athlor - Webflow Ecommerce Website Template",
+    title: "About | Velocity Wear - Performance Sportswear",
     description:
-      "Learn about Athlor, a modern sports store template built for sports retailers and brands selling sportswear, equipment, and products online.",
+      "Learn about Velocity Wear, a performance sportswear brand built for athletes who train hard and move fast.",
   },
 };
 
@@ -644,8 +644,8 @@ export default function Page() {
                     <div className="story-wrap">
                       <div className="story-subtitle">Our Mission</div>
                       <div className="story-excerpt">
-                        At Athlor, our mission is to make sports more accessible, engaging, and
-                        inspiring for everyone. We bring together passionate athletes, fans, and
+                        At Velocity Wear, our mission is to make sports more accessible, engaging,
+                        and inspiring for everyone. We bring together passionate athletes, fans, and
                         communities through innovative experiences that encourage people to stay
                         active, connect, and enjoy the sports they love.
                       </div>
@@ -654,9 +654,9 @@ export default function Page() {
                       <div className="story-subtitle">Our Vision</div>
                       <div className="story-excerpt">
                         To create a world where sports bring people closer, inspire healthier
-                        lifestyles, and unlock the potential in everyone. Athlor aims to become a
-                        trusted destination for athletes, fans, and communities to connect, compete,
-                        and grow through the power of sports.
+                        lifestyles, and unlock the potential in everyone. Velocity Wear aims to
+                        become a trusted destination for athletes, fans, and communities to connect,
+                        compete, and grow through the power of sports.
                       </div>
                     </div>
                   </div>

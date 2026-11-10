@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Athlor - Webflow Ecommerce Website Template",
+  title: "Privacy Policy | Velocity Wear - Performance Sportswear",
   description:
-    "Read Athlor’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
+    "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
   openGraph: {
-    title: "Privacy Policy | Athlor - Webflow Ecommerce Website Template",
+    title: "Privacy Policy | Velocity Wear - Performance Sportswear",
     description:
-      "Read Athlor’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
+      "Read Velocity Wear’s privacy policy to learn how personal data, customer information, website activity, and online store interactions are collected and protected.",
   },
 };
 
@@ -36,11 +36,11 @@ export default function Page() {
               </div>
               <div className="legal-details-block">
                 <div hero-text="" className="legal-details">
-                  <div className="legal-title">Privacy Policy for Athlor</div>
+                  <div className="legal-title">Privacy Policy for Velocity Wear</div>
                   <div className="legal-text">
-                    Welcome to Athlor. Your privacy is important to us. This Privacy Policy outlines
-                    how we collect, use, and protect your information when you visit or interact
-                    with our website.
+                    Welcome to Velocity Wear. Your privacy is important to us. This Privacy Policy
+                    outlines how we collect, use, and protect your information when you visit or
+                    interact with our website.
                   </div>
                 </div>
                 <div hero-text="" className="legal-details">
@@ -72,7 +72,9 @@ export default function Page() {
                 </div>
                 <div text-animation="" className="legal-details">
                   <div className="legal-title">Cookies and Tracking Technologies</div>
-                  <div className="legal-text">Athlor uses cookies and similar technologies to:</div>
+                  <div className="legal-text">
+                    Velocity Wear uses cookies and similar technologies to:
+                  </div>
                   <ul role="list" className="legal-lists">
                     <li>Enhance user experience</li>
                     <li>Analyze website traffic</li>
@@ -143,9 +145,9 @@ export default function Page() {
                 <div text-animation="" className="legal-details">
                   <div className="legal-title">Children&apos;s Privacy</div>
                   <div className="legal-text">
-                    Athlor does not knowingly collect personal information from children under 13.
-                    If you believe a child has provided personal data, please contact us, and we
-                    will remove it promptly.
+                    Velocity Wear does not knowingly collect personal information from children
+                    under 13. If you believe a child has provided personal data, please contact us,
+                    and we will remove it promptly.
                   </div>
                 </div>
                 <div text-animation="" className="legal-details">
@@ -161,7 +163,7 @@ export default function Page() {
                     If you have any questions about this Privacy Policy, please contact us:
                   </div>
                   <div className="legal-text">
-                    <strong>Athlor</strong>
+                    <strong>Velocity Wear</strong>
                     <br />
                     Email:{" "}
                     <a
@@ -188,7 +190,7 @@ export default function Page() {
                     </a>
                   </div>
                   <div className="legal-text">
-                    By using Athlor, you agree to the terms of this Privacy Policy.
+                    By using Velocity Wear, you agree to the terms of this Privacy Policy.
                   </div>
                 </div>
               </div>

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
-  title: "Reset Password | Athlor - Webflow Ecommerce Website Template",
+  title: "Reset Password | Velocity Wear - Performance Sportswear",
   description:
-    "Reset your Athlor password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
+    "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
   openGraph: {
-    title: "Reset Password | Athlor - Webflow Ecommerce Website Template",
+    title: "Reset Password | Velocity Wear - Performance Sportswear",
     description:
-      "Reset your Athlor password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
+      "Reset your Velocity Wear password securely and regain access to your account with simple recovery steps. Get back to shopping for sports gear with confidence.",
   },
 };
 
@@ -25,8 +25,8 @@ export default function Page() {
           <div className="user-detail">
             <a aria-label="Brand" href="/" className="user-brand w-inline-block">
               <img
-                src="/assets/d63c349c05-6a9fb60d73862f4b02e538a4_03bd8f1ef3be98da18e9c676efb654f7_Athlor-Dark-Logo.svg"
-                alt="Sitelogo"
+                src="/assets/velocity-wear-logo-dark.svg"
+                alt="Velocity Wear"
                 className="user-logo"
               />
             </a>

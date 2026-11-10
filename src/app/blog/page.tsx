@@ -4,13 +4,13 @@ import BlogCard from "@/components/BlogCard";
 import { getPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Athlor - Webflow Ecommerce Website Template",
+  title: "Blog | Velocity Wear - Performance Sportswear",
   description:
-    "Explore the Athlor blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
+    "Explore the Velocity Wear blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
   openGraph: {
-    title: "Blog | Athlor - Webflow Ecommerce Website Template",
+    title: "Blog | Velocity Wear - Performance Sportswear",
     description:
-      "Explore the Athlor blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
+      "Explore the Velocity Wear blog for sports news, tips, insights, and helpful content covering sportswear, equipment, and popular games and activities.",
   },
 };
 

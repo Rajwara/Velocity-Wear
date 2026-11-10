@@ -23,13 +23,13 @@ export default function Header({ variant = "base" }: { variant?: HeaderVariant }
             <NavLink href="/" className="header-brand w-nav-brand">
               <img
                 loading="eager"
-                src="/assets/d63c349c05-6a9fb60d73862f4b02e538a4_03bd8f1ef3be98da18e9c676efb654f7_Athlor-Dark-Logo.svg"
-                alt="Sitelogo"
+                src="/assets/velocity-wear-logo-dark.svg"
+                alt="Velocity Wear"
                 className={`header-logo dark-logo${brand}`}
               />
               <img
-                alt="Sitelogo"
-                src="/assets/a6ffb9a74e-6a9fb614dd3d8f3ed9d387ec_6b2fe9712a84dd80b22a43981117bb70_Athlor-Brand-Logo.svg"
+                alt="Velocity Wear"
+                src="/assets/velocity-wear-logo-light.svg"
                 className={`header-logo brand-logo${brand}`}
               />
             </NavLink>

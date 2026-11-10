@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "External Link | Athlor - Webflow Ecommerce Website Template",
+  title: "External Link | Velocity Wear - Performance Sportswear",
   description:
-    "Visit the external link from Athlor to access additional resources, websites, tools, and helpful information related to your sports store and website.",
+    "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",
   openGraph: {
-    title: "External Link | Athlor - Webflow Ecommerce Website Template",
+    title: "External Link | Velocity Wear - Performance Sportswear",
     description:
-      "Visit the external link from Athlor to access additional resources, websites, tools, and helpful information related to your sports store and website.",
+      "Visit the external link from Velocity Wear to access additional resources, websites, tools, and helpful information related to your sports store and website.",
   },
 };
 

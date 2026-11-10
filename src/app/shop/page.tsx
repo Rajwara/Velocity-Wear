@@ -6,13 +6,13 @@ import ShopCategoryNav from "@/components/ShopCategoryNav";
 import { getProducts } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "Shop | Athlor - Webflow Ecommerce Website Template",
+  title: "Shop | Velocity Wear - Performance Sportswear",
   description:
-    "Shop sportswear, equipment, and game products with Athlor, a complete online sports store template for retailers and brands selling sports products.",
+    "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
   openGraph: {
-    title: "Shop | Athlor - Webflow Ecommerce Website Template",
+    title: "Shop | Velocity Wear - Performance Sportswear",
     description:
-      "Shop sportswear, equipment, and game products with Athlor, a complete online sports store template for retailers and brands selling sports products.",
+      "Shop performance sportswear from Velocity Wear: running, training, football, tennis, outerwear and accessories.",
   },
 };
 
@@ -30,7 +30,7 @@ export default function Page() {
             <div className="shop-block">
               <div className="shop-title-block">
                 <h1 hero-text="" className="shop-title">
-                  Athlor Equipment
+                  Velocity Wear Equipment
                 </h1>
               </div>
               <div className="shop-post-block">

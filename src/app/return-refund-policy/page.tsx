@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
-  title: "Return & Refund Policy | Athlor - Webflow Ecommerce Website Template",
+  title: "Return & Refund Policy | Velocity Wear - Performance Sportswear",
   description:
-    "Read Athlor’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
+    "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
   openGraph: {
-    title: "Return & Refund Policy | Athlor - Webflow Ecommerce Website Template",
+    title: "Return & Refund Policy | Velocity Wear - Performance Sportswear",
     description:
-      "Read Athlor’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
+      "Read Velocity Wear’s return and refund policy for clear details on returns, refunds, eligibility, order issues, and the process for requesting a refund or return.",
   },
 };
 

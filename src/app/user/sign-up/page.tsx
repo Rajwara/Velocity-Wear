@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
-  title: "Sign Up | Athlor - Webflow Ecommerce Website Template",
+  title: "Sign Up | Velocity Wear - Performance Sportswear",
   description:
-    "Sign up for Athlor to create your account, explore sports gear, manage orders, access personalized features, and enjoy a seamless shopping experience.",
+    "Sign up for Velocity Wear to create your account, explore sports gear, manage orders, access personalized features, and enjoy a seamless shopping experience.",
   openGraph: {
-    title: "Sign Up | Athlor - Webflow Ecommerce Website Template",
+    title: "Sign Up | Velocity Wear - Performance Sportswear",
     description:
-      "Sign up for Athlor to create your account, explore sports gear, manage orders, access personalized features, and enjoy a seamless shopping experience.",
+      "Sign up for Velocity Wear to create your account, explore sports gear, manage orders, access personalized features, and enjoy a seamless shopping experience.",
   },
 };
 
@@ -25,8 +25,8 @@ export default function Page() {
           <div className="user-detail">
             <a aria-label="Brand" href="/" className="user-brand w-inline-block">
               <img
-                src="/assets/d63c349c05-6a9fb60d73862f4b02e538a4_03bd8f1ef3be98da18e9c676efb654f7_Athlor-Dark-Logo.svg"
-                alt="Sitelogo"
+                src="/assets/velocity-wear-logo-dark.svg"
+                alt="Velocity Wear"
                 className="user-logo"
               />
             </a>

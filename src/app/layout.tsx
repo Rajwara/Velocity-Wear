@@ -7,7 +7,7 @@ import "@/styles/fonts.css";
 import "@/styles/overrides.css";
 
 export const metadata: Metadata = {
-  title: "Athlor - Sports Store",
+  title: "Velocity Wear - Performance Sportswear",
   icons: {
     icon: [
       {

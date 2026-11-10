@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import WebflowPage from "@/components/WebflowPage";
 
 export const metadata: Metadata = {
-  title: "Protected | Athlor - Webflow Ecommerce Website Template",
-  description:
-    "Access Athlor’s protected page with secure content and essential information for managing your sports website, store, products, and online experience.",
+  title: "Protected | Velocity Wear - Performance Sportswear",
+  description: "This Velocity Wear page is password protected.",
   openGraph: {
-    title: "Protected | Athlor - Webflow Ecommerce Website Template",
-    description:
-      "Access Athlor’s protected page with secure content and essential information for managing your sports website, store, products, and online experience.",
+    title: "Protected | Velocity Wear - Performance Sportswear",
+    description: "This Velocity Wear page is password protected.",
   },
 };
 

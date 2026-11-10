@@ -7,13 +7,13 @@ import { getProducts } from "@/data/products";
 import { getPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Athlor - Webflow Ecommerce Website Template",
+  title: "Velocity Wear - Performance Sportswear",
   description:
-    "Athlor is a modern sports store template for sports retailers and brands, featuring sports products, equipment, categories, checkout, FAQ, and more.",
+    "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
   openGraph: {
-    title: "Athlor - Webflow Ecommerce Website Template",
+    title: "Velocity Wear - Performance Sportswear",
     description:
-      "Athlor is a modern sports store template for sports retailers and brands, featuring sports products, equipment, categories, checkout, FAQ, and more.",
+      "Velocity Wear makes performance sportswear for running, training, football and tennis. Shop new collections, find your fit and train in comfort.",
   },
 };
 

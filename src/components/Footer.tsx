@@ -239,16 +239,16 @@ export default function Footer({ pageId }: { pageId: string }) {
         <div className="footer-mark-block">
           <div className="footer-mark">
             <div className="footer-loop">
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
             </div>
             <div className="footer-loop">
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
-              <div className="footer-watermark">Athlor.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
+              <div className="footer-watermark">Velocity Wear.</div>
             </div>
           </div>
         </div>
@@ -256,7 +256,7 @@ export default function Footer({ pageId }: { pageId: string }) {
           <div className="w-layout-blockcontainer main-container w-container">
             <div className="footer-copy">
               <div className="footer-info">
-                <div className="footer-info-text">Copyright © Athlor</div>
+                <div className="footer-info-text">Copyright © Velocity Wear</div>
                 <div className="footer-info-dot" />
                 <div className="footer-info-text">
                   Designed by{" "}
