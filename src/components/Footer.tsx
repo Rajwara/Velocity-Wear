@@ -185,9 +185,6 @@ export default function Footer({ pageId }: { pageId: string }) {
                     >
                       Return &amp; Refund Policy
                     </NavLink>
-                    <NavLink aria-label="Text Link" href="/404" className="footer-nav-link">
-                      404 Error
-                    </NavLink>
                   </div>
                 </div>
               </div>
