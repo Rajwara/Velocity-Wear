@@ -262,11 +262,6 @@ export default function Footer({ pageId }: { pageId: string }) {
               <div className="footer-info">
                 <div className="footer-info-text">Copyright © Velocity Wear</div>
               </div>
-              <div className="footer-info">
-                <NavLink href="/return-refund-policy" aria-label="Nav Link" className="footer-link">
-                  Return &amp; Refund Policy
-                </NavLink>
-              </div>
             </div>
           </div>
         </div>
