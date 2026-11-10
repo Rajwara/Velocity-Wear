@@ -152,11 +152,11 @@ export default function Footer({ pageId }: { pageId: string }) {
                     <NavLink aria-label="Text Link" href="/shop" className="footer-nav-link">
                       Shop
                     </NavLink>
+                    <NavLink aria-label="Text Link" href="/blog" className="footer-nav-link">
+                      Blog
+                    </NavLink>
                     <NavLink aria-label="Text Link" href="/contact" className="footer-nav-link">
                       Contact
-                    </NavLink>
-                    <NavLink href="/faq" aria-label="Text Link" className="footer-nav-link">
-                      FAQ
                     </NavLink>
                   </div>
                 </div>
@@ -165,11 +165,28 @@ export default function Footer({ pageId }: { pageId: string }) {
                 <div className="footer-cont">
                   <div className="footer-name">Utilities</div>
                   <div className="footer-navbar">
+                    <NavLink aria-label="Text Link" href="/faq" className="footer-nav-link">
+                      FAQ
+                    </NavLink>
+                    <NavLink aria-label="Text Link" href="/cart" className="footer-nav-link">
+                      Cart
+                    </NavLink>
+                    <NavLink
+                      aria-label="Text Link"
+                      href="/privacy-policy"
+                      className="footer-nav-link"
+                    >
+                      Privacy Policy
+                    </NavLink>
+                    <NavLink
+                      aria-label="Text Link"
+                      href="/return-refund-policy"
+                      className="footer-nav-link"
+                    >
+                      Return &amp; Refund Policy
+                    </NavLink>
                     <NavLink aria-label="Text Link" href="/404" className="footer-nav-link">
                       404 Error
-                    </NavLink>
-                    <NavLink aria-label="Text Link" href="/401" className="footer-nav-link">
-                      Protected Page
                     </NavLink>
                   </div>
                 </div>
