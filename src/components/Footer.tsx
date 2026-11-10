@@ -247,30 +247,6 @@ export default function Footer({ pageId }: { pageId: string }) {
             <div className="footer-copy">
               <div className="footer-info">
                 <div className="footer-info-text">Copyright © Velocity Wear</div>
-                <div className="footer-info-dot" />
-                <div className="footer-info-text">
-                  Designed by{" "}
-                  <a
-                    href="https://www.tncflow.com"
-                    aria-label="Link Block"
-                    target="_blank"
-                    className="footer-link"
-                  >
-                    TNCFlow
-                  </a>
-                </div>
-                <div className="footer-info-dot" />
-                <div className="footer-info-text">
-                  Powered by<span className="footer-span"> </span>
-                  <a
-                    href="https://www.webflow.com"
-                    aria-label="Link Block"
-                    target="_blank"
-                    className="footer-link"
-                  >
-                    Webflow
-                  </a>
-                </div>
               </div>
               <div className="footer-info">
                 <NavLink href="/return-refund-policy" aria-label="Nav Link" className="footer-link">
