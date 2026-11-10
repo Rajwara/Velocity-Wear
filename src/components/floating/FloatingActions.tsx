@@ -1,11 +1,33 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import ChatPanel from "@/components/floating/ChatPanel";
 import NewsletterModal from "@/components/floating/NewsletterModal";
 import { scrollToTop } from "@/lib/scroll";
+import { WELCOME_OFFER } from "@/lib/site";
 
-/** Floating buttons: chat and newsletter bottom-left, back to top bottom-right. */
+const OFFER_KEY = "velocity-wear-offer-dismissed";
+const offerListeners = new Set<() => void>();
+
+function offerDismissed() {
+  try {
+    const until = Number(window.localStorage.getItem(OFFER_KEY));
+    return Number.isFinite(until) && until > Date.now();
+  } catch {
+    return false;
+  }
+}
+
+function subscribeOffer(cb: () => void) {
+  offerListeners.add(cb);
+  window.addEventListener("storage", cb);
+  return () => {
+    offerListeners.delete(cb);
+    window.removeEventListener("storage", cb);
+  };
+}
+
+/** Floating buttons: chat and the welcome-offer (newsletter) pill bottom-left, back to top bottom-right. */
 export default function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
   const [newsletterOpen, setNewsletterOpen] = useState(false);
@@ -18,45 +40,24 @@ export default function FloatingActions() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Hidden on the server and until the browser says it hasn't been dismissed.
+  const offerVisible = !useSyncExternalStore(subscribeOffer, offerDismissed, () => true);
+  const dismissOffer = () => {
+    try {
+      const until = Date.now() + WELCOME_OFFER.hideForDays * 24 * 60 * 60 * 1000;
+      window.localStorage.setItem(OFFER_KEY, String(until));
+    } catch {
+      // storage unavailable: hide for this page view only
+    }
+    offerListeners.forEach((cb) => cb());
+  };
+
   const closeNewsletter = useCallback(() => setNewsletterOpen(false), []);
   const closeChat = useCallback(() => setChatOpen(false), []);
 
   return (
     <>
       <div className="fab-stack fab-stack-left">
-        <button
-          type="button"
-          className="fab fab-newsletter"
-          onClick={() => {
-            setChatOpen(false);
-            setNewsletterOpen(true);
-          }}
-          aria-label="Subscribe to our newsletter"
-          aria-haspopup="dialog"
-        >
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <rect
-              x="3"
-              y="5"
-              width="18"
-              height="14"
-              rx="2"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-            <path
-              d="m4 7 8 6 8-6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="fab-tip">Newsletter</span>
-        </button>
-
         <button
           type="button"
           className={`fab fab-chat${chatOpen ? " is-active" : ""}`}
@@ -91,6 +92,38 @@ export default function FloatingActions() {
           )}
           <span className="fab-tip">{chatOpen ? "Close chat" : "Chat with us"}</span>
         </button>
+        {offerVisible ? (
+          <div className="fab-offer">
+            <button
+              type="button"
+              className="fab-offer-pill"
+              onClick={() => {
+                setChatOpen(false);
+                setNewsletterOpen(true);
+              }}
+              aria-haspopup="dialog"
+            >
+              <span className="fab-offer-dot" aria-hidden="true" />
+              {WELCOME_OFFER.label}
+            </button>
+            <button
+              type="button"
+              className="fab-offer-close"
+              aria-label="Dismiss welcome offer"
+              onClick={dismissOffer}
+            >
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path
+                  d="M6 6l12 12M18 6 6 18"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        ) : null}
       </div>
       <div className="fab-stack fab-stack-right">
         <button
@@ -114,7 +147,7 @@ export default function FloatingActions() {
         </button>
       </div>
 
-      <ChatPanel open={chatOpen} onClose={closeChat} />
+      <ChatPanel open={chatOpen} onClose={closeChat} raised={offerVisible} />
       <NewsletterModal open={newsletterOpen} onClose={closeNewsletter} />
     </>
   );

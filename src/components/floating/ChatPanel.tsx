@@ -61,7 +61,16 @@ const FALLBACK =
   "Thanks for your message! A team member can help with that — tap one of the buttons below to reach us directly.";
 
 /** Support chat with instant answers to common questions and links to contact the team. */
-export default function ChatPanel({ open, onClose }: { open: boolean; onClose: () => void }) {
+export default function ChatPanel({
+  open,
+  onClose,
+  raised = false,
+}: {
+  open: boolean;
+  onClose: () => void;
+  /** true when the welcome-offer pill sits under the chat button */
+  raised?: boolean;
+}) {
   const [messages, setMessages] = useState<Message[]>([{ from: "bot", text: GREETING }]);
   const [draft, setDraft] = useState("");
   const [typing, setTyping] = useState(false);
@@ -115,7 +124,7 @@ export default function ChatPanel({ open, onClose }: { open: boolean; onClose: (
 
   return (
     <div
-      className={`chat-panel${open ? " is-open" : ""}`}
+      className={`chat-panel${open ? " is-open" : ""}${raised ? " is-raised" : ""}`}
       role="dialog"
       aria-label="Chat with Velocity Wear"
       aria-hidden={!open}

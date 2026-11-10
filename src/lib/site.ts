@@ -8,3 +8,10 @@ export const SITE_CONTACT = {
    */
   whatsapp: "",
 };
+
+/** Floating "welcome offer" button that opens the newsletter popup. */
+export const WELCOME_OFFER = {
+  label: "Get your welcome offer",
+  /** How long the button stays hidden after a visitor dismisses it */
+  hideForDays: 7,
+};

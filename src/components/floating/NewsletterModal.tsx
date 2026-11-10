@@ -92,12 +92,13 @@ export default function NewsletterModal({ open, onClose }: { open: boolean; onCl
             </div>
           ) : (
             <>
-              <div className="nl-eyebrow">Newsletter</div>
+              <div className="nl-eyebrow">Welcome offer</div>
               <h2 id="nl-title" className="nl-title">
                 Join the Velocity Club
               </h2>
               <p className="nl-text">
-                Be the first to hear about new collections, training tips and member-only offers.
+                Sign up to get your welcome offer by email, plus first access to new collections,
+                training tips and member-only deals.
               </p>
               <form className="nl-form" onSubmit={onSubmit} noValidate data-cart-form="">
                 <label htmlFor="nl-email" className="filter-sr">

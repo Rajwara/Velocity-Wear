@@ -120,7 +120,9 @@ Every page has floating buttons (`src/components/floating/`): chat and newslette
   sizing, order tracking) plus "Email us" and "Chat on WhatsApp" buttons. Set your
   support email and WhatsApp number in `src/lib/site.ts` (the WhatsApp button only
   shows once a number is set). Edit the answers in `TOPICS` in `ChatPanel.tsx`.
-- **Newsletter:** opens a sign-up popup. Sign-ups from the popup and the footer form go
+- **Welcome offer:** a "Get your welcome offer" pill that opens the newsletter sign-up
+  popup; visitors can dismiss it with × (hidden for 7 days). Change the label in
+  `WELCOME_OFFER` in `src/lib/site.ts`. Sign-ups from the popup and the footer form go
   to `POST /api/newsletter`; set `NEWSLETTER_WEBHOOK_URL` to forward them to your email
   tool (e.g. Mailchimp or Klaviyo via Zapier / Make). Without it they are only logged.
 - **Back to top:** appears after scrolling down.
