@@ -15,3 +15,14 @@ export const WELCOME_OFFER = {
   /** How long the button stays hidden after a visitor dismisses it */
   hideForDays: 7,
 };
+
+/**
+ * Social media profile links shown as icons in the footer.
+ * Leave a value empty and its icon is shown without a link.
+ */
+export const SOCIAL_LINKS = {
+  facebook: "",
+  instagram: "",
+  tiktok: "",
+  x: "",
+};

@@ -1,3 +1,4 @@
+import SocialLink from "@/components/SocialLink";
 import NavLink from "@/components/NavLink";
 
 export default function Footer({ pageId }: { pageId: string }) {
@@ -31,12 +32,7 @@ export default function Footer({ pageId }: { pageId: string }) {
                     </a>
                   </div>
                   <div className="footer-social">
-                    <a
-                      aria-label="Facebook"
-                      href="https://www.facebook.com/TNCFlow"
-                      target="_blank"
-                      className="footer-social-link w-inline-block"
-                    >
+                    <SocialLink network="facebook" label="Facebook">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100%"
@@ -49,13 +45,8 @@ export default function Footer({ pageId }: { pageId: string }) {
                           fill="currentColor"
                         />
                       </svg>
-                    </a>
-                    <a
-                      aria-label="Instagram"
-                      href="https://www.instagram.com/tncflow"
-                      target="_blank"
-                      className="footer-social-link w-inline-block"
-                    >
+                    </SocialLink>
+                    <SocialLink network="instagram" label="Instagram">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100%"
@@ -83,13 +74,8 @@ export default function Footer({ pageId }: { pageId: string }) {
                           </clipPath>
                         </defs>
                       </svg>
-                    </a>
-                    <a
-                      aria-label="Tiktok"
-                      href="https://www.tiktok.com/@tncflow.com"
-                      target="_blank"
-                      className="footer-social-link w-inline-block"
-                    >
+                    </SocialLink>
+                    <SocialLink network="tiktok" label="Tiktok">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100%"
@@ -109,13 +95,8 @@ export default function Footer({ pageId }: { pageId: string }) {
                           </clipPath>
                         </defs>
                       </svg>
-                    </a>
-                    <a
-                      aria-label="X (Twitter)"
-                      href="https://www.x.com/TNCFlow"
-                      target="_blank"
-                      className="footer-social-link w-inline-block"
-                    >
+                    </SocialLink>
+                    <SocialLink network="x" label="X (Twitter)">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100%"
@@ -135,7 +116,7 @@ export default function Footer({ pageId }: { pageId: string }) {
                           </clipPath>
                         </defs>
                       </svg>
-                    </a>
+                    </SocialLink>
                   </div>
                 </div>
               </div>

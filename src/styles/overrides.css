@@ -38,3 +38,8 @@ input {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Footer social icons without a profile link yet */
+.footer-social-link.is-unlinked {
+  cursor: default;
+}
