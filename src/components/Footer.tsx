@@ -165,17 +165,8 @@ export default function Footer({ pageId }: { pageId: string }) {
                 <div className="footer-cont">
                   <div className="footer-name">Utilities</div>
                   <div className="footer-navbar">
-                    <NavLink aria-label="Text Link" href="/licenses" className="footer-nav-link">
-                      Licenses
-                    </NavLink>
                     <NavLink aria-label="Text Link" href="/404" className="footer-nav-link">
                       404 Error
-                    </NavLink>
-                    <NavLink aria-label="Text Link" href="/changelog" className="footer-nav-link">
-                      Changelog
-                    </NavLink>
-                    <NavLink aria-label="Text Link" href="/style-guide" className="footer-nav-link">
-                      Style Guide
                     </NavLink>
                     <NavLink aria-label="Text Link" href="/401" className="footer-nav-link">
                       Protected Page

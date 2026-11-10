@@ -19,7 +19,7 @@ npm run typecheck
 src/
   app/                         one folder per route (App Router)
     page.tsx                   home
-    about, shop, blog, contact, faq, changelog, licenses, style-guide,
+    about, shop, blog, contact, faq, cart, checkout, thank-you,
     privacy-policy, return-refund-policy, external-link, 401, user/*
     product/[slug]             product detail (generated from src/data/products.ts)
     product-category/[slug]    category listing
