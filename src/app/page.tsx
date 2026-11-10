@@ -4,6 +4,7 @@ import FindYourFit from "@/components/home/FindYourFit";
 import MostWanted from "@/components/home/MostWanted";
 import BenefitsSection from "@/components/BenefitsSection";
 import BlogCard from "@/components/BlogCard";
+import Button from "@/components/Button";
 import { getLatestPosts } from "@/data/blog";
 
 export const metadata: Metadata = {
@@ -737,11 +738,16 @@ export default function Page() {
                 <div className="latest-wrap-block">
                   <div className="blog-wrap w-dyn-list">
                     <div role="list" className="blog-list w-dyn-items">
-                      {getLatestPosts(6).map((post) => (
+                      {getLatestPosts(3).map((post) => (
                         <BlogCard key={post.slug} post={post} animation="text-animation" />
                       ))}
                     </div>
                   </div>
+                </div>
+                <div className="latest-more">
+                  <Button variant="primary" href="/blog">
+                    View All Blogs
+                  </Button>
                 </div>
               </div>
             </div>

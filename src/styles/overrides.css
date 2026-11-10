@@ -43,3 +43,10 @@ input {
 .footer-social-link.is-unlinked {
   cursor: default;
 }
+
+/* Home page: "View All Blogs" button under the latest posts */
+.latest-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
