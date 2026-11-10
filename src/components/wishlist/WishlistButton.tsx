@@ -64,7 +64,7 @@ export function WishlistHeaderLink({ countClassName }: { countClassName: string 
       className="header-toggle wish-header w-inline-block"
       aria-label={`Wishlist, ${count} ${count === 1 ? "item" : "items"}`}
     >
-      {count > 0 ? <div className={countClassName}>{count}</div> : null}
+      {count > 0 ? <div className={`${countClassName} header-badge`}>{count}</div> : null}
       <span className="wish-header-icon">
         <HeartIcon filled={count > 0} size={20} />
       </span>

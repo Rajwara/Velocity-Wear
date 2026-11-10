@@ -80,26 +80,58 @@
   color: #e1ec2b;
 }
 
-/* Header heart */
+/* Header heart (matches the cart icon) */
 .wish-header {
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: 10px;
   color: inherit;
   text-decoration: none;
 }
 .wish-header-icon {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: var(--_↔️-size-variables---global-sizes--size-l, 40px);
+  height: var(--_↔️-size-variables---global-sizes--size-l, 40px);
   border-radius: 50%;
-  background: #e6e6e6;
+  background-color: #fff;
+  background-image: linear-gradient(#0000001a, #0000001a);
   color: #0e0e0e;
+  transition: background-color 0.2s;
 }
 .wish-header:hover .wish-header-icon {
+  background-image: none;
+  background-color: #e1ec2b;
+}
+
+/* Header icon bar: size to its contents instead of Webflow's fixed 185px */
+.header-wrapp-block {
+  width: auto;
+  gap: 10px;
+}
+.cart-toggle {
+  position: relative;
+}
+/* Item counts as small badges on the corner of the heart and cart icons */
+.header-text.header-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 1;
+  box-sizing: border-box;
+  min-width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0 5px;
+  border: 2px solid #fff;
+  border-radius: 999px;
   background: #e1ec2b;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  color: #0e0e0e;
+  pointer-events: none;
 }
 
 /* Wishlist page */
@@ -147,9 +179,6 @@
 @media screen and (max-width: 767px) {
   .wish-grid.shop-cols-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .wish-header {
-    margin-right: 6px;
   }
 }
 @media screen and (max-width: 479px) {

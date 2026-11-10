@@ -50,3 +50,9 @@ input {
   justify-content: center;
   margin-top: 48px;
 }
+
+/* Clip only sideways (prevents horizontal scroll) so header badges near the top aren't cut off */
+.page-wrapper {
+  overflow-x: clip;
+  overflow-y: visible;
+}

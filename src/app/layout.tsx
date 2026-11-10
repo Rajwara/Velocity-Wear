@@ -11,6 +11,7 @@ import "@/styles/cart-page.css";
 import "@/styles/floating.css";
 import "@/styles/home-sections.css";
 import "@/styles/wishlist.css";
+import "@/styles/responsive.css";
 import CartProvider from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import FloatingActions from "@/components/floating/FloatingActions";

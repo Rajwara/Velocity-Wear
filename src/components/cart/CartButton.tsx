@@ -23,7 +23,7 @@ export default function CartButton({
         aria-label={`Open cart, ${count} ${count === 1 ? "item" : "items"}`}
         onClick={open}
       >
-        <div className={countClassName}>{count}</div>
+        {count > 0 ? <div className={`${countClassName} header-badge`}>{count}</div> : null}
         {children}
       </button>
     </div>

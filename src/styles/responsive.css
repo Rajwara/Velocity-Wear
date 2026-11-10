@@ -1,0 +1,112 @@
+/* =====================================================================
+   Responsive tweaks for phones, tablets and laptops that the original
+   Webflow layout didn't cover (product grids, cart and home sections).
+   ===================================================================== */
+
+/* Laptops (992–1199px): give the cart / checkout items more room */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .cartpage-grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+  .cartpage-table-head,
+  .cartpage-item {
+    grid-template-columns: minmax(0, 2.6fr) 0.9fr 1.2fr 0.9fr;
+    gap: 12px;
+  }
+  .cartpage-thumb {
+    width: 84px;
+    height: 84px;
+  }
+  .cartpage-name {
+    font-size: 18px;
+  }
+  .mw-grid {
+    grid-template-columns: 240px 1fr;
+    gap: 32px;
+  }
+  .mw h2 {
+    font-size: 50px;
+  }
+}
+
+/* Phones (≤ 479px): two products per row instead of one big card */
+@media screen and (max-width: 479px) {
+  .shop-list,
+  .shop-list._3-columns,
+  .shop-list.shop-cols-2,
+  .shop-list.shop-cols-3,
+  .shop-list.shop-cols-4,
+  .wish-grid.shop-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 12px;
+    row-gap: 22px;
+  }
+  .shop-list .shop-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .shop-list .shop-price {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+  .shop-list .shop-btn {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  .shop-list .shop-bag {
+    width: 14px;
+    height: 14px;
+  }
+  .wish-on-card {
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+  }
+
+  /* Home: best sellers and categories two per row */
+  .mw-products,
+  .fyf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    row-gap: 20px;
+  }
+  .mw-product {
+    padding: 10px;
+  }
+  .mw-pill {
+    padding: 2px 8px;
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .mw-thumb {
+    height: 130px;
+  }
+  .mw-name {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .mw-price {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    font-size: 14px;
+  }
+  .fyf-im {
+    margin-bottom: 10px;
+  }
+  .fyf-pill {
+    top: 8px;
+    right: 8px;
+    padding: 2px 8px;
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .fyf-card h3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .fyf-from {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
