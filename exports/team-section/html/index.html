@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team section</title>
+    <!-- Fonts used by the section (swap for your own) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../team-section.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .demo-spacer {
+        display: grid;
+        place-items: center;
+        height: 80vh;
+        background: #f4f4f2;
+        font:
+          500 20px/1.4 Inter,
+          sans-serif;
+        color: #737373;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-spacer">Scroll down ↓</div>
+
+    <!-- ===== Team section: copy from here ===== -->
+    <section class="tm-section" aria-labelledby="tm-title">
+      <div class="tm-space">
+        <div class="tm-container">
+          <div class="tm-height">
+            <div class="tm-block">
+              <div class="tm-head">
+                <p class="tm-label" data-tm-reveal>Team</p>
+                <h2 class="tm-title" id="tm-title" data-tm-reveal>Meet the Team Behind the Game</h2>
+              </div>
+              <div class="tm-wrap" data-tm-reveal>
+                <div class="tm-card">
+                  <div class="tm-card-inner">
+                    <img
+                      class="tm-photo"
+                      src="../images/member-1.webp"
+                      alt="Alex Carter"
+                      loading="lazy"
+                    />
+                    <div class="tm-info">
+                      <h3 class="tm-name">Alex Carter</h3>
+                      <p class="tm-role">Founder &amp; CEO</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-card">
+                  <div class="tm-card-inner">
+                    <img
+                      class="tm-photo"
+                      src="../images/member-3.webp"
+                      alt="Daniel Brooks"
+                      loading="lazy"
+                    />
+                    <div class="tm-info">
+                      <h3 class="tm-name">Daniel Brooks</h3>
+                      <p class="tm-role">Product Specialist</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tm-card">
+                  <div class="tm-card-inner">
+                    <img
+                      class="tm-photo"
+                      src="../images/member-2.webp"
+                      alt="Sophia Miller"
+                      loading="lazy"
+                    />
+                    <div class="tm-info">
+                      <h3 class="tm-name">Sophia Miller</h3>
+                      <p class="tm-role">Customer Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Team section: copy to here ===== -->
+
+    <div class="demo-spacer">End of demo</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="team-section.js"></script>
+    <script>
+      initTeamSection(document.querySelector(".tm-section"), window.gsap, window.ScrollTrigger);
+    </script>
+  </body>
+</html>

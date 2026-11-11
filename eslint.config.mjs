@@ -15,7 +15,7 @@ const config = [
       "@next/next/no-location-assign-relative-destination": "off",
     },
   },
-  { ignores: [".next/**", "node_modules/**", "public/**", "next-env.d.ts"] },
+  { ignores: [".next/**", "node_modules/**", "public/**", "next-env.d.ts", "exports/**", "scripts/**"] },
 ];
 
 export default config;
